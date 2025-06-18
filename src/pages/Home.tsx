@@ -14,7 +14,7 @@ const Home = () => {
     <Box>
       <Grid container>
         <Grid size={12}>
-          <Hero/>
+          <Hero />
         </Grid>
         <Grid size={12}>
           <Timer />

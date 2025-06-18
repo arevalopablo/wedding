@@ -11,6 +11,9 @@ const theme = createTheme({
       fontWeight: 'bold',
       '@media (max-width: 900px)': {
         fontSize: '30px'
+      },
+      '@media (max-width: 768px)': {
+        fontSize: '25px'
       }
     },
     h2: {
@@ -18,6 +21,9 @@ const theme = createTheme({
       fontWeight: 'bold',
       '@media (max-width: 900px)': {
         fontSize: '14px'
+      },
+      '@media (max-width: 768px)': {
+        fontSize: '10px'
       }
     },
     h3: {

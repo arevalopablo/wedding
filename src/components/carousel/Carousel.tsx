@@ -19,7 +19,7 @@ const Carousel = (props: Props) => {
   }, [carousel])
   
   return (
-    <Box className='carousel-section'>
+    <Box className='carousel-section' >
         <Box className={carousel ? 'slide-img' : ''}>
           {arrayImg.map((img, index) => (
               <img key={index} src={img} alt="img" width={'500px'} style={{margin: '0 15px', borderRadius: '5px', boxShadow: '8px 8px 24px 0px rgba(66, 68, 90, 1)'}}/>
