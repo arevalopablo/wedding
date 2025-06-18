@@ -1,0 +1,47 @@
+[  
+  {
+    "pregunta": "donde nos conocimos?",
+    "id": 1,
+    "opciones" :[
+      {
+        "label": "trabajando",
+        "isCorrect": true,
+        "id": 1
+      },
+      {
+        "label": "en la facu",
+        "isCorrect": false,
+        "id": 2
+      },
+      {
+        "label": "en la calle",
+        "isCorrect": false,
+        "id": 3
+      }
+    ]
+  },
+  {
+    "pregunta": "cual es la comida favorita de Mariela",
+    "id": 2,
+    "opciones" :[
+      {
+        "label": "asado",
+        "isCorrect": false,
+        "id": 1
+      },
+      {
+        "label": "pizza",
+        "isCorrect": true,
+        "id": 2
+      },
+      {
+        "label": "empanadas",
+        "isCorrect": false,
+        "id": 3
+      }
+    ]
+  }
+]
+
+
+

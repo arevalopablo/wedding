@@ -1,0 +1,54 @@
+.carousel-section {
+  padding: 30px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  animation: 1s zoom ease;
+}
+
+.carousel-section::before,
+.carousel-section::after {
+  height: 100%;
+  width: 40px;
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.carousel-section::before {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #07928E);
+  left: 0;
+}
+
+.carousel-section::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #07928E);
+  right: 0;
+}
+
+.slide-img {
+  display: inline-block;
+  animation: 120s slide infinite linear;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {
+    transform: translate3d(0, 100px, 0) scale(0.6);
+    opacity: 0;
+    transition: 2s;
+  }
+  to {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

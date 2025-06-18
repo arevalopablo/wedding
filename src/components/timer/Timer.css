@@ -1,0 +1,39 @@
+.timer-container {
+  margin: 30px 0;
+  padding: 30px 0;
+  text-align: center;
+  color: #888;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px auto;
+  text-transform: uppercase;
+}
+
+.title {
+  font-style: italic;
+  font-size: 40px;
+  color: #07928E;
+  font-weight: bold;
+}
+
+.date-container {
+  padding: 20px;
+  color: #fff;
+  background: #07928E; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+
+
+
+
+
