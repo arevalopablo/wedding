@@ -21,7 +21,7 @@ const Home = () => {
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
         <Grid size={12}>
-          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 de Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" text4="" className=""/>
+          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" text4="" className=""/>
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>
