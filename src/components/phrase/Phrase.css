@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .phrase-section {
   height: 250px;
@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
   /* font-family: "Great Vibes", cursive !important;  */
+}
+
+.greatVibes {
+  font-family: "Great Vibes", cursive !important
 }
 
 .phrase-container {

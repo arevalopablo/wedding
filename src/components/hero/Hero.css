@@ -1,9 +1,0 @@
-.hero {
-  height: 99vh;
-  box-shadow: 0px 100px 73px -19px rgba(0, 0, 0, 0.5) inset;
-  /* background: url(../../assets/hero.svg); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(95%); */
-}

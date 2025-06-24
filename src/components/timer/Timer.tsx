@@ -15,17 +15,22 @@ const Timer = () => {
         ¡¡¡ NOS CASAMOS !!!
       </Typography>
       <Box className={"countdown-container"}>
-        <Grid container spacing={{ xs: 1, sm: 6, md: 8 }} flexWrap={{xs: 'nowrap'}}>
+        <Grid
+          container
+          spacing={{ xs: 1, sm: 4, md: 6 }}
+          flexWrap={{ xs: "nowrap" }}
+        >
           {Object.entries(time)
             .sort()
             .map(([key, value], index) => (
               <Grid
                 className={"date-container"}
-                sx={{ width: { xs: "95px", md: "170px" } }}
+                sx={{ width: { xs: "25%", sm: "150px", md: "170px" } }}
                 key={index}
-                
               >
-                <Typography variant="h1">{value}</Typography>
+                <Typography variant="h1" sx={{ mb: "5px" }}>
+                  {value}
+                </Typography>
                 <Typography variant="h2">{key}</Typography>
               </Grid>
             ))}

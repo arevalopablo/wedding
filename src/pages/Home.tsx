@@ -20,7 +20,7 @@ const Home = () => {
           <Timer />
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
-        <Grid size={12} bgcolor={'#07928E'}>
+        <Grid size={12}>
           <Carousel arrayImg={pictures}/>
         </Grid>
         <Grid size={12}>

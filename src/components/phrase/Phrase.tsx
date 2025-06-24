@@ -11,7 +11,7 @@ const Phrase = (props: Props) => {
   return (
     <Box className={"phrase-section "}>
       <Box className={"phrase-container phrase"}>
-        <Typography  variant="h3">{phrase}</Typography>
+        <Typography className="greatVibes" variant="h3">{phrase}</Typography>
       </Box>
     </Box>
   );
