@@ -6,7 +6,6 @@ import { pictures } from "../components/carousel/images";
 import Info from "../components/info/Info";
 import img from '../assets/sorpasso.svg'
 import fondo from '../assets/fondo.jpg'
-import sorpasso from '../assets/sorpasso.svg'
 import Hero from "../components/hero/Hero";
 
 
