@@ -30,7 +30,7 @@ const Home = () => {
           <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${img})`} text={'¿Dónde?'} text2="Il Sorpasso - San Telmo" text3="Humberto I° 478" text4="" className="info-container2"/>
+          <Info bgc={`url(${img})`} text={'¿Dónde?'} text2="Il Sorpasso" text3="Humberto I° 478 - San Telmo" text4="" className="info-container2"/>
         </Grid>
         <Grid size={12} bgcolor={'#FBF0C6'}>
           <Carousel arrayImg={pictures}/>
