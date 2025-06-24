@@ -31,7 +31,7 @@ const Timer = () => {
                 <Typography variant="h1" sx={{ mb: "5px" }}>
                   {value}
                 </Typography>
-                <Typography variant="h2">{key}</Typography>
+                <Typography variant="h2" sx={{fontSize: {xs: '14px'}}}>{key}</Typography>
               </Grid>
             ))}
         </Grid>

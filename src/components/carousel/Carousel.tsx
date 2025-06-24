@@ -23,7 +23,7 @@ const Carousel = (props: Props) => {
       {['obj', 'obj2'].map((_, i) => (
         <ImageList key={i} className={carousel ? 'slide-img' : ''} sx={{display: 'inline-flex'}}>
         {arrayImg.map((img, index) => (
-          <ImageListItem key={index} sx={{m: '0 15px', width: {xs: '400px', sm: '500px', md: '600px', lg: '700px'}}}>
+          <ImageListItem key={index} sx={{m: '0 15px', width: {xs: '300px', sm: '500px', md: '600px', lg: '700px'}}}>
             <img src={img} alt="img" style={{borderRadius: '5px'}}/>
           </ImageListItem>
         ))}
