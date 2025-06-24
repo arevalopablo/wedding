@@ -6,6 +6,7 @@ import { pictures } from "../components/carousel/images";
 import Info from "../components/info/Info";
 import img from '../assets/sorpasso.svg'
 import fondo from '../assets/fondo.jpg'
+import sorpasso from '../assets/sorpasso.svg'
 import Hero from "../components/hero/Hero";
 
 
@@ -20,11 +21,8 @@ const Home = () => {
           <Timer />
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
-        {/* <Grid size={12}>
-          <Carousel arrayImg={pictures}/>
-        </Grid> */}
         <Grid size={12}>
-          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 de Septiembre 2025" text3="Registro Civil Central" text4=" Uruguay 753 - 17 hs" className=""/>
+          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 de Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" text4="" className=""/>
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>

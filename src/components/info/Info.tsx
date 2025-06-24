@@ -15,7 +15,7 @@ const Info = (props: Props) => {
   const { bgc, text, text2, text3, text4, className } = props
 
   return (
-    <Box className={'info-section'} sx={{background: bgc }}>
+    <Box className={'info-section'} sx={{height: {sx: '200px', md: '400px'},background: bgc}}>
       <Box className={`info-container ${className}`} >
         <Typography variant="h1">{text}</Typography>
         <img src={calendar} alt="" width={'100px'} style={{margin: '0 auto'}}/>
