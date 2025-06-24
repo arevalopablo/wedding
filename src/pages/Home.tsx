@@ -20,13 +20,15 @@ const Home = () => {
           <Timer />
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
-        <Grid size={12}>
+        {/* <Grid size={12}>
           <Carousel arrayImg={pictures}/>
-        </Grid>
+        </Grid> */}
         <Grid size={12}>
           <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 de Septiembre 2025" text3="Registro Civil Central" text4=" Uruguay 753 - 17 hs" className=""/>
         </Grid>
-        
+        <Grid size={12}>
+          <Carousel arrayImg={pictures}/>
+        </Grid>
         <Grid size={12}>
           <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
         </Grid>
