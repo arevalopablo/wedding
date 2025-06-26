@@ -1,25 +1,22 @@
 .info-section {
   margin: 10px 0;
   padding: 30px;
-  /* height: 400px; */
 }
 
 .info-container {
   padding: 10px;
-  border-top: 2px solid #07928E;
-  border-bottom: 2px solid #07928E;
+  border-top: 2px solid #07928e;
+  border-bottom: 2px solid #07928e;
   text-align: center;
-  color: #07928E;
+  color: #07928e;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
 }
 
 .info-container2 {
-  border-top: 2px solid #FBF0C6;
-  border-bottom: 2px solid #FBF0C6;
-  color: #FBF0C6;
-  
+  border-top: 2px solid #fbf0c6;
+  border-bottom: 2px solid #fbf0c6;
+  color: #fbf0c6;
 }

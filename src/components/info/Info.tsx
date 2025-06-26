@@ -15,7 +15,7 @@ const Info = (props: Props) => {
   const { bgc, text, text2, text3, text4, className } = props;
 
   return (
-    <Box className={"info-section"} sx={{ background: bgc, height: {xs: '300px', sm: '300px', md: '400px'} }}>
+    <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'} ,height: {xs: '300px', sm: '300px', md: '400px'}}}>
       <Box className={`info-container ${className}`}>
         <Typography variant="h1">{text}</Typography>
         <ImageList sx={{width: '100px', m: '0 auto', display: 'flex'}}>
