@@ -7,7 +7,8 @@ import Info from "../components/info/Info";
 import img from '../assets/sorpasso.svg'
 import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
-import Timeline from "../components/timeline/Timeline";
+import Events from "../components/timeline/Events";
+
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
           <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" text4="" className=""/>
         </Grid >
         <Grid size={12}>
-          <Timeline/>
+          <Events/>
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>
