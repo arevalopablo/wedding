@@ -1,7 +1,7 @@
+// import location from '../../assets/icons/location.gif'
 import { Box, ImageList, ImageListItem, Typography } from "@mui/material";
 import { eventsData } from "./events";
 import "./Events.css";
-import location from '../../assets/icons/location.gif'
 
 // type Props = {};
 

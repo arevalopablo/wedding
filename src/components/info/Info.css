@@ -20,3 +20,10 @@
   border-bottom: 2px solid #fbf0c6;
   color: #fbf0c6;
 }
+
+.info-heart {
+  background-image: url(../../assets/heart-green.svg) ;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  /* background-size: contain; */
+}
