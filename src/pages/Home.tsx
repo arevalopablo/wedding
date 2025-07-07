@@ -9,7 +9,6 @@ import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 // import Events from "../components/timeline/Events";
 
-
 const Home = () => {
   return (
     <Box>
@@ -22,7 +21,7 @@ const Home = () => {
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
         <Grid size={12}>
-          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" text4="" className="info-heart"/>
+          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" className="info-container-green"/>
         </Grid >
         <Grid size={12}>
           {/* <Events/> */}
@@ -34,7 +33,7 @@ const Home = () => {
           <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${img})`} text={'¿Dónde?'} text2="Il Sorpasso" text3="Humberto I° 478 - San Telmo" text4="" className="info-container2"/>
+          <Info bgc={`url(${img})`} text={'¿Dónde?'} text2="Il Sorpasso" text3="Humberto I° 478 - San Telmo" className="info-container-golden"/>
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>

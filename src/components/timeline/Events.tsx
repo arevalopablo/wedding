@@ -25,7 +25,7 @@ const Events = () => {
               <Typography variant="h2">{data.step}</Typography>
               <ImageList sx={{width: '150px', m: '0 auto', display: 'flex'}}>
                 <ImageListItem >
-                  <img src={location} alt="location"/>
+                  {/* <img src={location} alt="location"/> */}
                 </ImageListItem>
               </ImageList>
               <Typography variant="h3">{data.time}</Typography>
