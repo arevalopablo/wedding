@@ -19,7 +19,7 @@
   background-image: url(../../assets/heart-green.svg) ;
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: 25%;
+  /* background-size: 25%; */
 }
 
 .info-container-golden {
@@ -29,7 +29,7 @@
   background-image: url(../../assets/heart-golden.svg) ;
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: 20%;
+  /* background-size: 20%; */
 }
 
 
