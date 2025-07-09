@@ -1,6 +1,7 @@
 .info-section {
   margin: 10px 0;
-  padding: 30px 20px;
+  /* padding: 30px 20px; */
+  padding: 20px;
 }
 
 .info-container {
@@ -13,14 +14,14 @@
 }
 
 .info-container-green {
-  /* border-top: 5px double #07928e; */
-  /* border-bottom: 5px double #07928e; */
+  border-top: 5px double #07928e;
+  border-bottom: 2px solid #07928e;
   color: #07928e;
   background-image: url(../../assets/heart-green.svg) ;
 }
 
 .info-container-golden {
-  /* border-top: 5px double #fbf0c6; */
+  border-top: 5px double #fbf0c6;
   border-bottom: 2px solid #fbf0c6;
   color: #fbf0c6;
   background-image: url(../../assets/heart-golden.svg) ;
