@@ -7,9 +7,9 @@ import Info from "../components/info/Info";
 import img from '../assets/sorpasso.svg'
 import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
-// import gondole from '../assets/gondole.jpg'
+import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
-import rialto from '../assets/videos/rialto.mp4'
+
 
 const Home = () => {
   return (
@@ -44,19 +44,9 @@ const Home = () => {
           <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
         </Grid>
         <Grid size={12}>
-          {/* <Info bgc={`url(${gondole})`} /> */}
+          <Info bgc={`url(${gondole})`} text="¿Regalo?" text2="Nuestro sueño es vivir en Italia... Ayudanos a cumplirlo!" text3="Alias: boda.m&p" className="info-container-golden"/>
         </Grid>
-        <Grid size={12} mb={'500px'}>
-          <Box width={'inherit'} height={'500px'} sx={{background: '#000', position: 'relative'}} >
-            <div style={{ height: '100%', width: '100%', }}>
-              <video  src={rialto} width={'100%'} height={'100%'} autoPlay muted loop style={{objectFit: 'inherit'}}>
-            </video>
-            </div>
-              <div style={{position: 'absolute', top: 'calc(50% - 80px)', left: 'calc(50% - 75px)', color: 'red', background: 'yellow transparent', height: '200px'}}>
-                <h1 >PRUEBA</h1>
-              </div>
-          </Box>
-        </Grid>
+        
       </Grid>
     </Box>
   );

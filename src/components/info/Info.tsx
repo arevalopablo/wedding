@@ -19,7 +19,7 @@ const Info = (props: Props) => {
       <Box className={`info-container ${className}`} sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
         <Typography variant="h1">{text}</Typography>
         <ImageList sx={{width: '100px', m: '0 auto', display: 'flex'}}>
-          <ImageListItem>
+          <ImageListItem >
             <img
               src={calendar}
               alt="icon"
