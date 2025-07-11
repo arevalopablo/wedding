@@ -44,7 +44,7 @@ const Home = () => {
           <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${gondole})`} text="¿Regalo?" text2="Nuestro sueño es vivir en Italia... Ayudanos a cumplirlo!" text3="Alias: boda.m&p" className="info-container-golden"/>
+          <Info bgc={`url(${gondole})`} text="¿Regalo?" text2="Soñamos vivir en Italia... Ayudanos a cumplirlo!" text3="Alias: boda.m&p" className="info-container-golden"/>
         </Grid>
         
       </Grid>
