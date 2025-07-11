@@ -46,7 +46,10 @@ const Home = () => {
         <Grid size={12}>
           <Info bgc={`url(${gondole})`} text="¿Regalo?" text2="Soñamos vivir en Italia... Ayudanos a cumplirlo!" text3="Alias: boda.m&p" className="info-container-golden"/>
         </Grid>
-        
+        <Grid size={12}>
+          <Carousel arrayImg={pictures}/>
+        </Grid>
+        <a href="https://wa.me/5491134141777">IR A WHATSAPP</a>
       </Grid>
     </Box>
   );
