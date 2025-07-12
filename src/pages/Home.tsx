@@ -9,7 +9,7 @@ import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
-import eucalipto from '../assets/eucalipto.svg'
+import eucalipto from '../assets/eucalipto-bgc.svg'
 
 
 const Home = () => {
@@ -51,8 +51,10 @@ const Home = () => {
           <Carousel arrayImg={pictures}/>
         </Grid>
         <Grid size={12}>
-          <Box sx={{height: '700px', background: `url(${eucalipto})`, backgroundSize: '20%', display: 'flex', alignItems: 'center'}}>
-            <Box sx={{height: '90%', width: '30%', m: '0 auto', background: '#07928e', borderRadius: '20px'}}></Box>
+          <Box sx={{height: {xs: '500px', md: '100vh'}, background: `url(${eucalipto}) #e8efe7 `, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'center'}}>
+            <Box sx={{height: {xs: '50%', md: '70%'}, width: {xs: '100%', md: '30%'}, m: '0 auto', background: '#e8efe7', borderRadius: '8px'}}>
+              
+            </Box>
           </Box>
         </Grid>
       </Grid>
