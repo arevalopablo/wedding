@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
@@ -9,8 +9,7 @@ import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
-import eucalipto from '../assets/eucalipto-bgc.svg'
-
+import Form from "../form/Form";
 
 const Home = () => {
   return (
@@ -51,25 +50,7 @@ const Home = () => {
           <Carousel arrayImg={pictures}/>
         </Grid>
         <Grid size={12}>
-          <Box sx={{height: {xs: '100vh', md: '100vh'}, background: `url(${eucalipto}) #e8efe7 `, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'center'}}>
-            <Box sx={{height: {xs: '50%', md: '70%'}, width: {xs: '100%', md: '30%'}, m: '0 auto', textAlign: 'center'}}>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-              <Typography>TE AMO DULCE PRINCESA TREMENDA</Typography>
-            </Box>
-          </Box>
+          <Form />
         </Grid>
       </Grid>
     </Box>
