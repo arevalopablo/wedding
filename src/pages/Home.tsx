@@ -9,6 +9,7 @@ import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
+import eucalipto from '../assets/eucalipto.svg'
 
 
 const Home = () => {
@@ -49,7 +50,11 @@ const Home = () => {
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>
         </Grid>
-        <a href="https://wa.me/5491134141777">IR A WHATSAPP</a>
+        <Grid size={12}>
+          <Box sx={{height: '700px', background: `url(${eucalipto})`, backgroundSize: '20%', display: 'flex', alignItems: 'center'}}>
+            <Box sx={{height: '90%', width: '30%', m: '0 auto', background: '#07928e', borderRadius: '20px'}}></Box>
+          </Box>
+        </Grid>
       </Grid>
     </Box>
   );
