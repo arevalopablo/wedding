@@ -1,17 +1,10 @@
-import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import "./Form.css";
 import useForm from "./useForm";
 
 const Form = () => {
   const { formik  } = useForm()
   console.log(Object.entries(formik.initialValues))
-
-  const obj = {
-    name: 'text',
-    lastName: 'text',
-    options: 'select',
-    message: 'textarea'
-  }
   
   return (
     <Box className="form-section">
@@ -30,7 +23,7 @@ const Form = () => {
         <Typography variant="h1" sx={{color: '#07928E', mb: '10px'}}>¡Confirmá tu asistencia!</Typography>
         <Typography variant="h2" sx={{color: '#07928E'}}>antes del 01 de Septiembre 2025</Typography>
         
-        <Box component={'form'} display={'flex'} flexDirection={'column'} gap={1} width={'400px'} m={'30px auto'}>
+        <Box component={'form'} display={'flex'} flexDirection={'column'} gap={1} width={{xs:'90%', sm: '60%', md: '40%', lg: '30%'}} m={'30px auto'}>
           {Object.entries(formik.initialValues).map((arr, index) => (
            <TextField key={index} label={arr[0]}></TextField>
            
