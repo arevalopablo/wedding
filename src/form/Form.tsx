@@ -9,13 +9,13 @@ const Form = () => {
     <Box className="form-section">
       <Box
         sx={{
-          height: { xs: "50%", md: "50%", lg: "70%" },
+          height: { md: "50%", lg: "70%" },
           width: "100%",
           m: "0 auto",
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "20px",
+          pt: "50px",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
