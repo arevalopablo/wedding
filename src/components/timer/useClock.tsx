@@ -13,7 +13,7 @@ const useClock = () => {
 
   const getTime = () => {
     const currentDate = new Date();
-    const wedding = new Date(2025, 8, 12, 18, 0, 0);
+    const wedding = new Date(2025, 8, 12, 17, 30, 0);
     const remain = wedding.getTime() - currentDate.getTime();
 
     let segundos: TimeValues = Math.floor(remain / 1000);

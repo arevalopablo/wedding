@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 type FormWedding = {
   nombre: string;
   apellido: string;
-  opciones: string[];
+  opciones: string;
   mensaje: string;
 };
 
@@ -12,7 +12,7 @@ const useForm = () => {
     initialValues: {
       nombre: "",
       apellido: "",
-      opciones: ["ninguno", "vegano", "vegetariano", "celíaco", "otro"],
+      opciones: "",
       mensaje: "",
     },
     onSubmit: (values, options) => {
@@ -21,8 +21,20 @@ const useForm = () => {
     },
   });
 
+  const formTypes = (key: string) => {
+    switch (key) {
+      case "opciones":
+        return "select";
+      case "mensaje":
+        return "textarea";
+      default:
+        return "text";
+    }
+  };
+
   return {
     formik,
+    formTypes,
   };
 };
 
