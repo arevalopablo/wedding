@@ -15,7 +15,7 @@ const Form = () => {
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          pt: "50px",
+          p: "20px",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
@@ -32,6 +32,7 @@ const Form = () => {
           gap={1}
           width={{ xs: "90%", sm: "60%", md: "40%", lg: "30%" }}
           m={"30px auto"}
+          onSubmit={formik.handleSubmit}
         >
           {Object.keys(formik.values).map((key, index) => (
             <TextField
