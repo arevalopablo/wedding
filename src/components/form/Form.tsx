@@ -9,13 +9,12 @@ const Form = () => {
     <Box className="form-section">
       <Box
         sx={{
-          height: { md: "50%", lg: "70%" },
           width: "100%",
           m: "0 auto",
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "50px 0 0 0",
+          p: {xs:"60px 0 0 0", sm: '60px 30px 0 30px', md: '130px 0 0 0', lg: '0'},
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
@@ -33,11 +32,12 @@ const Form = () => {
           width={{ xs: "90%", sm: "60%", md: "40%", lg: "30%" }}
           m={"30px auto"}
           onSubmit={formik.handleSubmit}
+          
         >
           {Object.keys(formik.values).map((key, index) => (
             <TextField
               sx={{textTransform: 'capitalize', border: 'none'}}
-              color="success"
+              // color="success"
               key={index}
               label={key === 'opciones' ? `Opciones de alimentación` : key}
               name={key}
@@ -48,7 +48,7 @@ const Form = () => {
               select={formTypes(key) === 'select'}
               multiline={formTypes(key) === 'textarea'}
               rows={4}
-              required
+              required={key !== 'mensaje'}
               // helperText={formik.errors[key]}
               // error={!!formik.errors[key]}
             >
