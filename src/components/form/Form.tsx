@@ -15,7 +15,7 @@ const Form = () => {
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "100px 0 0 0",
+          p: "20px",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
@@ -48,8 +48,9 @@ const Form = () => {
               select={formTypes(key) === 'select'}
               multiline={formTypes(key) === 'textarea'}
               rows={4}
-              helperText={formik.errors[key]}
-              error={!!formik.errors[key]}
+              required
+              // helperText={formik.errors[key]}
+              // error={!!formik.errors[key]}
             >
               {formTypes(key) === 'select' && ['Ninguno', 'Vegetariano', 'Vegano', 'Celíaco', 'Otro'].map((option, index) => (
                 <MenuItem key={index} value={option}>{option}</MenuItem>
