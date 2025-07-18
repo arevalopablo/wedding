@@ -15,7 +15,7 @@ const Form = () => {
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "30px 0 0 0",
+          p: "50px 0 0 0",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
@@ -41,7 +41,7 @@ const Form = () => {
               key={index}
               label={key === 'opciones' ? `Opciones de alimentación` : key}
               name={key}
-              value={formik.values[key]}
+              // value={formik.values[key]}
               placeholder={key === 'mensaje' ? 'Escribí lo que creas que necesitamos saber...' : `Escribí tu ${key}`}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
