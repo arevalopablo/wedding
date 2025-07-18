@@ -15,7 +15,7 @@ const Form = () => {
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "20px",
+          p: "30px 0 0 0",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
