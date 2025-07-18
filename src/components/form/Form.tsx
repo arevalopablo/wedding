@@ -15,7 +15,7 @@ const Form = () => {
           // background: "#e8efe7",
           // borderTop: '2px solid #07928E',
           // borderBottom: '2px solid #07928E',
-          p: "20px",
+          p: "100px 0 0 0",
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
@@ -36,17 +36,20 @@ const Form = () => {
         >
           {Object.keys(formik.values).map((key, index) => (
             <TextField
+              sx={{textTransform: 'capitalize', border: 'none'}}
               color="success"
               key={index}
               label={key === 'opciones' ? `Opciones de alimentación` : key}
               name={key}
-              // value={formik.values[key]}
+              value={formik.values[key]}
               placeholder={key === 'mensaje' ? 'Escribí lo que creas que necesitamos saber...' : `Escribí tu ${key}`}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               select={formTypes(key) === 'select'}
               multiline={formTypes(key) === 'textarea'}
               rows={4}
-              sx={{textTransform: 'capitalize', border: 'none'}}
+              helperText={formik.errors[key]}
+              error={!!formik.errors[key]}
             >
               {formTypes(key) === 'select' && ['Ninguno', 'Vegetariano', 'Vegano', 'Celíaco', 'Otro'].map((option, index) => (
                 <MenuItem key={index} value={option}>{option}</MenuItem>

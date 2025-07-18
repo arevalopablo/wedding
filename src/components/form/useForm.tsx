@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { formValidationSchema } from "../../validations/form.validation";
 
 type FormWedding = {
   nombre: string;
@@ -15,6 +16,7 @@ const useForm = () => {
       opciones: "",
       mensaje: "",
     },
+    validationSchema: formValidationSchema,
     onSubmit: (values, options) => {
       console.log(values);
       options.resetForm();

@@ -9,7 +9,7 @@ import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
-import Form from "../form/Form";
+import Form from "../components/form/Form";
 
 const Home = () => {
   return (
