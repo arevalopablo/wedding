@@ -1,4 +1,4 @@
-import { Box, ImageList, ImageListItem, Typography } from "@mui/material";
+import { Box, Button, ImageList, ImageListItem, Typography } from "@mui/material";
 import "./Info.css";
 import calendar from "../../assets/regalo.gif";
 
@@ -7,14 +7,16 @@ type Props = {
   text: string;
   text2: string;
   text3: string;
+  btnText: string,
+  showBtn: boolean,
   className: string;
 };
 
 const Info = (props: Props) => {
-  const { bgc, text, text2, text3, className } = props;
+  const { bgc, text, text2, text3, btnText, showBtn, className } = props;
 
   return (
-    <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '300px', sm: '300px', md: '400px'}}}>
+    <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '300px', sm: '300px', md: '450px'}}}>
       
       <Box className={`info-container ${className}`} sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
         <Typography variant="h1">{text}</Typography>
@@ -28,6 +30,7 @@ const Info = (props: Props) => {
         </ImageList>
         <Typography variant="h1">{text2}</Typography>
         <Typography variant="h2">{text3}</Typography>
+        {showBtn && <Button variant="contained">{btnText}</Button>}
       </Box>
     </Box>
   );

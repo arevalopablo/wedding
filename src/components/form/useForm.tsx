@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import { formValidationSchema } from "../../validations/form.validation";
 
 type FormWedding = {
+  [key: string]: string;
   nombre: string;
   apellido: string;
   opciones: string;

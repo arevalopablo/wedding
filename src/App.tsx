@@ -9,7 +9,7 @@ const theme = createTheme({
     fontFamily: '"Montserrat", sans-serif;',
     h1: {
       fontSize: "40px",
-      fontWeight: "bold",
+      // fontWeight: "bold",
       "@media (max-width: 900px)": {
         fontSize: "30px",
       },

@@ -41,7 +41,7 @@ const Form = () => {
               key={index}
               label={key === 'opciones' ? `Opciones de alimentación` : key}
               name={key}
-              // value={formik.values[key]}
+              value={formik.values[key]}
               placeholder={key === 'mensaje' ? 'Escribí lo que creas que necesitamos saber...' : `Escribí tu ${key}`}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

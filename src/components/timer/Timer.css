@@ -1,8 +1,14 @@
 .timer-container {
+  background: url(../../assets/eucalipto-bgc.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin: 20px 0;
-  padding: 20px 0;
   text-align: center;
-  color: #888;
+  /* color: #888; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .countdown-container {
@@ -10,7 +16,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 60px auto;
   text-transform: uppercase;
 }
 
@@ -18,18 +23,16 @@
   font-style: italic;
   font-size: 40px;
   color: #07928E;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .date-container {
-  padding: 20px;
-  color: #fff;
-  background: #07928E; 
+  color: #07928E;
+  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  font-style: italic;
   border-radius: 8px;
 }
 
