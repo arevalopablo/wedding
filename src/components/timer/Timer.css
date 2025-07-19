@@ -12,7 +12,7 @@
 }
 
 .countdown-container {
-  padding: 10px;
+  padding: 10px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -23,7 +23,6 @@
   font-style: italic;
   font-size: 40px;
   color: #07928E;
-  /* font-weight: bold; */
 }
 
 .date-container {
@@ -33,7 +32,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border-radius: 8px;
 }
 
 

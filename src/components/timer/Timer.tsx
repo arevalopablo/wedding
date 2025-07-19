@@ -11,10 +11,10 @@ const Timer = () => {
 
   return (
     <Box className={"timer-container"} sx={{height: {xs: '100vh', md: '100vh'}}}>
-      <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '60px', md: '120px'}, color: 'rgb(185 155 96)', mt: '20px'}}>Maru</Typography>
+      <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '60px', md: '120px'}, color: 'rgb(185 155 96)'}}>Maru</Typography>
       <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '40px', md: '120px'}, color: 'rgb(185 155 96)'}}>&</Typography>
       <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '60px', md: '120px'}, color: 'rgb(185 155 96)'}}>Pablo</Typography>
-      <Typography variant={"h1"} className="title" sx={{fontFamily: 'Great Vibes', fontSize: {xs: '40px', md: '90px'}}}>
+      <Typography variant={"h1"} className="title" sx={{fontFamily: 'Great Vibes', fontSize: {xs: '40px', md: '90px'}, mt: '20px'}}>
         ¡¡¡ Nos Casamos !!!
       </Typography>
       <Box className={"countdown-container"}>
@@ -29,7 +29,7 @@ const Timer = () => {
             .map(([key, value], index) => (
               <Grid
                 className={"date-container"}
-                sx={{ width: { xs: "25%", sm: "150px", md: "170px", color: '#375849' } }}
+                sx={{ width: { sm: "150px", md: "170px", color: '#375849' } }} //xs: 25%
                 p={'20px'}
                 key={index}
               >
