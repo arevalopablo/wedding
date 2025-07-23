@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <Box>
       <Grid container>
-        {/* <Grid size={12}>
+        <Grid size={12}>
           <Hero />
-        </Grid> */}
+        </Grid>
         <Grid size={12}>
           <Timer />
         </Grid>

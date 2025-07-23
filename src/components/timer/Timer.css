@@ -1,5 +1,5 @@
 .timer-section {
-  min-height: 100vh;
+  height: 100vh;
   background: url(../../assets/eucalipto-bgc.svg);
   background-repeat: no-repeat;
   background-size: cover;
