@@ -11,10 +11,8 @@ const Form = () => {
         sx={{
           width: "100%",
           m: "0 auto",
-          // background: "#e8efe7",
-          // borderTop: '2px solid #07928E',
-          // borderBottom: '2px solid #07928E',
           p: {xs:"60px 0 0 0", sm: '60px 30px 0 30px', md: '130px 0 0 0', lg: '0'},
+          height: 'inherit'
         }}
       >
         <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
