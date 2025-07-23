@@ -1,16 +1,17 @@
 .timer-section {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../../assets/eucalipto-bgc.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
   display: flex;
-align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
 .timer-maru-pablo {
+  height: auto;
   margin: 0 auto;
   background: rgba(255,255,255, .6);
   box-shadow: 3px 3px 3px 20px rgba(255,255,255, .6);
