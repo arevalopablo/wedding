@@ -10,17 +10,20 @@ const Timer = () => {
   }
 
   return (
-    <Box className={"timer-container"} sx={{height: {xs: '100vh', md: '100vh'}}}>
-      <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '60px', md: '120px'}, color: 'rgb(185 155 96)'}}>Maru</Typography>
-      <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '40px', md: '120px'}, color: 'rgb(185 155 96)'}}>&</Typography>
-      <Typography variant={"h1"} sx={{fontFamily: 'Great Vibes', fontSize: {xs: '60px', md: '120px'}, color: 'rgb(185 155 96)'}}>Pablo</Typography>
-      <Typography variant={"h1"} className="title" sx={{fontFamily: 'Great Vibes', fontSize: {xs: '40px', md: '90px'}, mt: '20px'}}>
+    <Box className={"timer-container"} >
+      <Box width={{xs: '90%', sm: '80%',md: '80%', lg: '60%'}} border={'4px solid #333'} bgcolor={'rgba(255,255,255, .6)'} m={'0 auto'} p={{xs: '50px 0', md: '50px'}} boxShadow={'3px 3px 3px 20px rgba(255,255,255, .6)'}>
+        <Box display={"flex"} flexDirection={{xs: 'column', md: 'row'}} justifyContent={{md: 'center'}} alignItems={{md: 'center'}}>
+        {['Maru', '&', 'Pablo'].map((name, index) => (
+          <Typography key={index} variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: {xs: name === '&' ? '50px' : '70px', sm: name === '&' ? '60px' : '90px', md: name === '&' ? '60px' : '90px'}, m: {md: '0 10px'}, color: name === '&' ? '#afafaf' : ''}}>{name}</Typography>
+        ))}
+      </Box>
+      <Typography variant={"h1"} className="title" sx={{fontFamily: 'Great Vibes', fontSize: {xs: '50px', sm: '60px', md: '60px'}, mt: {xs: '20px', sm: '10px', md: '10px'}}}>
         ¡¡¡ Nos Casamos !!!
       </Typography>
       <Box className={"countdown-container"}>
         <Grid
           container
-          spacing={{ xs: 1, sm: 4, md: 6 }}
+          spacing={{ xs: 1, sm: 4 }}
           flexWrap={{ xs: "nowrap" }}
           
         >
@@ -29,11 +32,10 @@ const Timer = () => {
             .map(([key, value], index) => (
               <Grid
                 className={"date-container"}
-                sx={{ width: { sm: "150px", md: "170px", color: '#375849' } }} //xs: 25%
                 p={'20px'}
                 key={index}
               >
-                <Typography variant="h1" sx={{ mb: "5px", fontFamily: 'Great Vibes', fontSize: {xs: '50px', md: '80px'} }}>
+                <Typography variant="h1" sx={{ mb: "5px", fontFamily: 'Great Vibes', fontSize: {xs: '50px', sm: '60px', md: '60px'} }}>
                   {value}
                 </Typography>
                 <Typography variant="h2" >{key}</Typography>
@@ -41,6 +43,8 @@ const Timer = () => {
             ))}
         </Grid>
       </Box>
+      </Box>
+      
     </Box>
   );
 };

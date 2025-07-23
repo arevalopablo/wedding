@@ -1,11 +1,10 @@
 .timer-container {
+  height: 100vh;
   background: url(../../assets/eucalipto-bgc.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 20px 0;
   text-align: center;
-  /* color: #888; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,13 +20,11 @@
 
 .title {
   font-style: italic;
-  font-size: 40px;
   color: #07928E;
 }
 
 .date-container {
-  color: #07928E;
-  /* background-color: yellow; */
+  color: #375849;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
