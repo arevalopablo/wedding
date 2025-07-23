@@ -1,4 +1,4 @@
-.timer-container {
+.timer-section {
   height: 100vh;
   background: url(../../assets/eucalipto-bgc.svg);
   background-repeat: no-repeat;
@@ -8,6 +8,12 @@
   display: flex;
 align-items: center;
   justify-content: center;
+}
+
+.timer-maru-pablo {
+  margin: 0 auto;
+  background: rgba(255,255,255, .6);
+  box-shadow: 3px 3px 3px 20px rgba(255,255,255, .6);
 }
 
 .countdown-container {

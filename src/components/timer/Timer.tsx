@@ -10,8 +10,8 @@ const Timer = () => {
   }
 
   return (
-    <Box className={"timer-container"} >
-      <Box width={{xs: '95%', sm: '80%',md: '80%', lg: '60%'}} bgcolor={'rgba(255,255,255, .6)'} m={'0 auto'} p={{xs: '50px 0', md: '50px'}} >
+    <Box className={"timer-section"} >
+      <Box className='timer-maru-pablo' width={{xs: '95%', sm: '70%', md: '80%', lg: '60%'}} p={{xs: '50px 0', md: '50px'}}>
         <Box display={"flex"} flexDirection={{xs: 'column', md: 'row'}} justifyContent={{md: 'center'}} alignItems={{md: 'center'}}>
         {['Maru', '&', 'Pablo'].map((name, index) => (
           <Typography key={index} variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: {xs: name === '&' ? '50px' : '70px', sm: name === '&' ? '60px' : '90px', md: name === '&' ? '60px' : '90px'}, m: {md: '0 10px'}, color: name === '&' ? '#c1944a' : '#375849'}}>{name}</Typography>
