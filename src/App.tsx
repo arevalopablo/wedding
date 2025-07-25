@@ -9,14 +9,12 @@ const theme = createTheme({
     fontFamily: '"Montserrat", sans-serif;',
     h1: {
       fontSize: "40px",
-      // fontWeight: "bold",
       "@media (max-width: 900px)": {
         fontSize: "30px",
       },
     },
     h2: {
       fontSize: "24px",
-      fontWeight: "bold",
       "@media (max-width: 900px)": {
         fontSize: "16px",
       },
@@ -26,7 +24,6 @@ const theme = createTheme({
     },
     h3: {
       fontSize: "20px",
-      fontWeight: "bold",
       "@media (max-width: 900px)": {
         fontSize: "16px",
       },

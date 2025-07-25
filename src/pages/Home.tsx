@@ -10,6 +10,7 @@ import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
 import Form from "../components/form/Form";
+import regalo from '../assets/regalo.gif'
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
         </Grid>
         {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
         <Grid size={12}>
-          <Info bgc={`url(${fondo})`} text={'¿Cuándo?'} text2="12 Septiembre 2025" text3="Uruguay 753, CABA - 17:00 hs" className="info-container-green" showBtn btnText="Ver mapa"/>
+          <Info bgc={`url(${fondo})`} mainText={'¿Cuándo?'} subtext="12 Septiembre 2025" description="Uruguay 753, CABA - 17:00 hs" className="info-container-green" showBtn btnText="Ver mapa" icon={regalo}/>
         </Grid >
         <Grid size={12}>
           {/* <Events/> */}
@@ -35,7 +36,7 @@ const Home = () => {
           <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${img})`} text={'¿Dónde?'} text2="Il Sorpasso" text3="Humberto I° 478 - San Telmo" className="info-container-golden" showBtn btnText="Ver mapa"/>
+          <Info bgc={`url(${img})`} mainText={'¿Dónde?'} subtext="Il Sorpasso" description="Humberto I° 478 - San Telmo" className="info-container-golden" showBtn btnText="Ver mapa" icon={regalo} />
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>
@@ -44,7 +45,7 @@ const Home = () => {
           <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${gondole})`} text="¿Regalo?" text2="Soñamos vivir en Italia... Ayudanos a cumplirlo!" text3="Alias: boda.m&p" className="info-container-golden" showBtn btnText="Ver alias"/>
+          <Info bgc={`url(${gondole})`} mainText="¿Regalo?" subtext="Soñamos vivir en Italia... Ayudanos a cumplirlo!" description="Alias: boda.m&p" className="info-container-golden" showBtn btnText="Ver alias" icon={regalo} />
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>

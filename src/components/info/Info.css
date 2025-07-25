@@ -26,4 +26,9 @@
   background-image: url(../../assets/heart-golden.svg) ;
 }
 
+.btn {
+  width: 200px;
+  margin: 0 auto 20px auto !important;
+}
+
 
