@@ -20,7 +20,7 @@ const Info = (props: Props) => {
     <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '400px', sm: '400px', md: '450px'}}}>
       
       <Box className={`info-container ${className}`} sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
-        <Typography variant="h1" fontWeight={'bold'}>{mainText}</Typography>
+        <Typography variant="h1" fontWeight={'bold'} >{mainText}</Typography>
         <ImageList sx={{width: '100px', m: '10px auto', display: 'flex'}}>
           <ImageListItem >
             <img
@@ -29,8 +29,8 @@ const Info = (props: Props) => {
             />
           </ImageListItem>
         </ImageList>
-        <Typography variant="h1" fontWeight={'bold'}>{subtext}</Typography>
-        <Typography variant="h2" fontWeight={'bold'}>{description}</Typography>
+        <Typography variant="h1" fontWeight={'bold'} >{subtext}</Typography>
+        <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px'}}>{description}</Typography>
         {showBtn && <Button variant="contained" className="btn"> {btnText}</Button>}
       </Box>
     </Box>

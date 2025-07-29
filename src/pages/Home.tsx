@@ -45,7 +45,7 @@ const Home = () => {
           <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
         </Grid>
         <Grid size={12}>
-          <Info bgc={`url(${gondole})`} mainText="¿Regalo?" subtext="Soñamos vivir en Italia... Ayudanos a cumplirlo!" description="Alias: boda.m&p" className="info-container-golden" showBtn btnText="Ver alias" icon={regalo} />
+          <Info bgc={`url(${gondole})`} mainText="¿Regalo?" subtext="Soñamos vivir en Italia..." description="Ayudanos a cumplirlo!" className="info-container-golden" showBtn btnText="Ver alias" icon={regalo} />
         </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>

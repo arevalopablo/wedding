@@ -19,7 +19,7 @@ const theme = createTheme({
         fontSize: "16px",
       },
       "@media (max-width: 600px)": {
-        fontSize: "14px",
+        fontSize: "16px",
       },
     },
     h3: {
