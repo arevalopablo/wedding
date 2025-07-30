@@ -30,7 +30,7 @@ const Info = (props: Props) => {
           </ImageListItem>
         </ImageList>
         <Typography variant="h1" fontWeight={'bold'} >{subtext}</Typography>
-        <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px'}}>{description}</Typography>
+        <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px', md: '24px'}}>{description}</Typography>
         {showBtn && <Button variant="contained" className="btn"> {btnText}</Button>}
       </Box>
     </Box>

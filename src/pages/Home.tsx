@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
@@ -11,11 +11,23 @@ import gondole from '../assets/gondole.jpg'
 // import Events from "../components/timeline/Events";
 import Form from "../components/form/Form";
 import regalo from '../assets/regalo.gif'
+import secret from '../assets/secret.jpg'
+import { useState } from "react";
 
 const Home = () => {
+  const [loading, setLoading] = useState<boolean>(true)
+
+  setInterval(() => {
+    setLoading(false)
+  }, 5000);
+
   return (
     <Box>
-      <Grid container>
+      {loading ? 
+      <Box sx={{height: '100vh', color: '#fff', background: `url(${secret})`, backgroundSize: 'contain'}} display={'flex'} alignItems={'flex-end'} justifyContent={'center'} pb={'100px'}>
+        <Typography variant="h2" sx={{}}>QUEREMOS CONTARTE ALGO</Typography>
+      </Box> : (
+        <Grid container>
         <Grid size={12}>
           <Hero />
         </Grid>
@@ -54,6 +66,9 @@ const Home = () => {
           <Form />
         </Grid>
       </Grid>
+      )}
+      
+      
     </Box>
   );
 };
