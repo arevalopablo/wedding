@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
@@ -8,28 +8,19 @@ import img from '../assets/sorpasso.svg'
 import fondo from '../assets/fondo.jpg'
 import Hero from "../components/hero/Hero";
 import gondole from '../assets/gondole.jpg'
-// import Events from "../components/timeline/Events";
 import Form from "../components/form/Form";
 import regalo from '../assets/regalo.gif'
-import secret from '../assets/secret.jpg'
-import { useState } from "react";
+import foto from "../assets/hero.svg";
+import foto2 from "../assets/capri.jpg";
 
 const Home = () => {
-  const [loading, setLoading] = useState<boolean>(true)
-
-  setInterval(() => {
-    setLoading(false)
-  }, 5000);
-
+  
   return (
     <Box>
-      {loading ? 
-      <Box sx={{height: '100vh', color: '#fff', background: `url(${secret})`, backgroundSize: 'contain'}} display={'flex'} alignItems={'flex-end'} justifyContent={'center'} pb={'100px'}>
-        <Typography variant="h2" sx={{}}>QUEREMOS CONTARTE ALGO</Typography>
-      </Box> : (
-        <Grid container>
+      
+      <Grid container>
         <Grid size={12}>
-          <Hero />
+          <Hero xsImg={foto} mdImg={foto2}/>
         </Grid>
         <Grid size={12}>
           <Timer />
@@ -38,9 +29,6 @@ const Home = () => {
         <Grid size={12}>
           <Info bgc={`url(${fondo})`} mainText={'¿Cuándo?'} subtext="12 Septiembre 2025" description="Uruguay 753, CABA - 17:00 hs" className="info-container-green" showBtn btnText="Ver mapa" icon={regalo}/>
         </Grid >
-        <Grid size={12}>
-          {/* <Events/> */}
-        </Grid>
         <Grid size={12}>
           <Carousel arrayImg={pictures}/>
         </Grid>
@@ -66,9 +54,6 @@ const Home = () => {
           <Form />
         </Grid>
       </Grid>
-      )}
-      
-      
     </Box>
   );
 };
