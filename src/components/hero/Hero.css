@@ -1,20 +1,43 @@
 .btn-hero {
   width: 70%;
   margin: 20px auto !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   /* background: #000 !important; */
   color: #fff !important;
   border: 1px solid white !important;
   opacity: 0;
   transform: translateY(20px);
   animation: btn-move 2s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .text-hero {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   animation: text-move 3s ease-in-out forwards;
+}
+
+.text1 {
+  opacity: 0;
+  animation: showText1 2s ease-in-out forwards;
+}
+
+.text2 {
+  opacity: 0;
+  animation: showText1 3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.text3 {
+  opacity: 0;
+animation: showText1 4s ease-in-out forwards;
+animation-delay: 2s;
+}
+
+@keyframes showText1 {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes btn-move {
@@ -23,7 +46,6 @@
     transform: translateY(0);
   }
 }
-
 
 @keyframes text-move {
   to {
