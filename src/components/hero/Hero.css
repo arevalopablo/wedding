@@ -8,9 +8,24 @@
   opacity: 0;
   transform: translateY(20px);
   animation: btn-move 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.text-hero {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: text-move 3s ease-in-out forwards;
 }
 
 @keyframes btn-move {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes text-move {
   to {
     opacity: 1;
     transform: translateY(0);
