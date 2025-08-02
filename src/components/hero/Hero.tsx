@@ -25,8 +25,8 @@ const Hero = (props: Props) => {
       }}
     >
       {showBtn && 
-        <Box m={'0 auto'} textAlign={'center'} mb={'30px'}>
-          <Typography variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '60px !important', color: '#fff !important'}}>Maru & Pablo</Typography>
+        <Box m={'0 auto'} textAlign={'center'} mb={'30px'} height={'90%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+          <Typography variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '60px !important', pt: '20px'}}>Maru & Pablo</Typography>
           <Button className="btn-hero" onClick={onClick}>Ingresar</Button>
         </Box>
       }
