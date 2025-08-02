@@ -12,7 +12,10 @@ import Form from "../components/form/Form";
 import regalo from "../assets/regalo.gif";
 import foto from "../assets/hero.svg";
 import foto2 from "../assets/capri.jpg";
-import welcomeImg from "../assets/welcome-img.png";
+// import welcomeImgMobile from "../assets/welcome-img-mobile.png";
+import welcomeImgTablet from '../assets/welcome-img-tablet.png'
+import welcomeImgDesktop from '../assets/welcome-img-desktop.png'
+
 import { useState } from "react";
 
 const Home = () => {
@@ -21,7 +24,7 @@ const Home = () => {
   return (
     <Box>
       {loading ? (
-        <Hero xsImg={welcomeImg} welcomeScreen showBtn onClick={() => setLoading(false)}/>
+        <Hero xsImg={welcomeImgTablet} mdImg={welcomeImgTablet} lgImg={welcomeImgDesktop} welcomeScreen showBtn onClick={() => setLoading(false)}/>
       ) : (
         <Grid container>
           <Grid size={12}>
