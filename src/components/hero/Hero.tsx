@@ -18,21 +18,19 @@ const Hero = (props: Props) => {
       sx={{
         height: { xs: welcomeScreen ? '100vh' : '430px', sm: "600px", md: "100vh" },
         background: { xs: `url(${xsImg})`, md: `url(${mdImg})` },
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: {xs: 'no-repeat'},
         backgroundSize: { xs: "auto", md: "cover" },
         backgroundPosition: { xs: "center", md: "center" },
         filter: { md: "grayscale(1)"},
       }}
     >
       {showBtn && 
-        <Box m={'0 auto'} textAlign={'center'} mb={'30px'} height={'90%'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
-          {/* <Typography className="text-hero" variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '60px !important', pt: '20px'}}>Maru & Pablo</Typography> */}
+        <Box className='welcome-screen-section'>
           <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-            <Typography className="text1" variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '60px !important', pt: '20px', mr: '15px'}}> Maru</Typography>
-          <Typography className="text2" variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '40px !important', pt: '20px', mr: '15px'}}>&</Typography>
-          <Typography className="text3" variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: '60px !important', pt: '20px'}}>Pablo</Typography>
+            {['Maru', '&', 'Pablo'].map((name, index) => (
+              <Typography className={`showText${index + 1}`} key={index} variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: name === '&' ? '40px !important' : '60px !important', pt: '20px', mr: '12px', opacity: '0'}}>{name}</Typography>
+            ))}
           </Box>
-          
           <Button className="btn-hero" onClick={onClick}>Ingresar</Button>
         </Box>
       }
