@@ -12,7 +12,7 @@ import Form from "../components/form/Form";
 import regalo from "../assets/regalo.gif";
 import foto from "../assets/hero.svg";
 import foto2 from "../assets/capri.jpg";
-import secret from "../assets/secret.jpg";
+import welcomeImg from "../assets/welcome-img.png";
 import { useState } from "react";
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <Box>
       {loading ? (
-        <Hero xsImg={secret} prevImg showBtn onClick={() => setLoading(false)}/>
+        <Hero xsImg={welcomeImg} welcomeScreen showBtn onClick={() => setLoading(false)}/>
       ) : (
         <Grid container>
           <Grid size={12}>

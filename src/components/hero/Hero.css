@@ -1,9 +1,10 @@
 .btn-hero {
   width: 70%;
   margin: 20px auto !important;
-  font-size: 20px !important;
-  background: #000 !important;
+  font-size: 18px !important;
+  /* background: #000 !important; */
   color: #fff !important;
+  border: 1px solid white !important;
   opacity: 0;
   transform: translateY(20px);
   animation: btn-move 2s ease-in-out forwards;
