@@ -17,7 +17,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: btn-move 2s ease-in-out forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .showText1 {
@@ -25,12 +25,12 @@
 }
 
 .showText2 {
-  animation: showText 3s ease-in-out forwards;
+  animation: showText 2s ease-in-out forwards;
   animation-delay: 1s;
 }
 
 .showText3 {
-  animation: showText 4s ease-in-out forwards;
+  animation: showText 2s ease-in-out forwards;
   animation-delay: 2s;
 }
 

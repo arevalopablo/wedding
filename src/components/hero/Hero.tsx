@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
         background: { xs: `url(${xsImg})`, sm: `url(${mdImg})`, md: `url(${lgImg})`, lg: `url(${lgImg})` },
         backgroundRepeat: {xs: 'no-repeat', sm: 'no-repeat', lg: 'no-repeat'},
         backgroundSize: { xs: "cover", sm: 'cover', md: "cover", lg: 'cover' },
-        backgroundPosition: { xs: "center", sm: welcomeScreen ? 'top' : 'center', md: "center", lg: 'center' },
+        backgroundPosition: { xs: "center", sm: welcomeScreen ? 'top' : 'center', md: "center", lg: '0 -150px' },
         filter: { md: "grayscale(1)"}, //SE QUEDA DEPENDIENDO DE LA IMAGEN QUE SE ELIJA
       }}
     >

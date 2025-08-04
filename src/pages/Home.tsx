@@ -13,19 +13,48 @@ import regalo from "../assets/regalo.gif";
 import foto from "../assets/hero.svg";
 import foto2 from "../assets/capri.jpg";
 // import welcomeImgMobile from "../assets/welcome-img-mobile.png";
-import welcomeImgTablet from '../assets/welcome-img-tablet.png'
-import welcomeImgDesktop from '../assets/welcome-img-desktop.png'
-
+import welcomeImgTablet from "../assets/welcome-img-tablet.png";
+import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
+import Couple from "../assets/icons/Couple";
 
 const Home = () => {
   const [loading, setLoading] = useState<boolean>(true);
+  const [loader, setLoader] = useState<boolean>(false);
+
+  setTimeout(() => {
+    setLoader(false);
+  }, 50000);
 
   return (
     <Box>
-      {loading ? (
-        <Hero xsImg={welcomeImgTablet} mdImg={welcomeImgTablet} lgImg={welcomeImgDesktop} welcomeScreen showBtn onClick={() => setLoading(false)}/>
-      ) : (
+      {loading && !loader && (
+        <Hero
+          xsImg={welcomeImgTablet}
+          mdImg={welcomeImgTablet}
+          lgImg={welcomeImgDesktop}
+          welcomeScreen
+          showBtn
+          onClick={() => {
+            setLoading(false), setLoader(true);
+          }}
+        />
+      )}
+
+      {loader && (
+        <Grid container>
+          <Grid
+            size={12}
+            height={"100vh"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Couple />
+          </Grid>
+        </Grid>
+      )}
+      {!loader && !loading && (
         <Grid container>
           <Grid size={12}>
             <Hero xsImg={foto} mdImg={foto2} />
