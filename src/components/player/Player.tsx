@@ -10,7 +10,7 @@ type Props = {
 
 const Player = (props: Props) => {
   const { src } = props;
-  const [booleano, setBooleano] = useState<boolean>(true);
+  const [booleano] = useState<boolean>(true); //AGREGAR EL SET!
 
   return (
     <Box className="player-container">
