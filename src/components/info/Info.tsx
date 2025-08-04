@@ -10,11 +10,12 @@ type Props = {
     btnText: string,
     showBtn: boolean,
     className: string;
+    btnClassname?: string
     
 };
 
 const Info = (props: Props) => {
-  const { bgc, mainText, subtext, description, btnText, showBtn, className, icon,  } = props;
+  const { bgc, mainText, subtext, description, btnText, showBtn, className, btnClassname, icon  } = props;
 
   return (
     <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '430px', sm: '400px', md: '450px'}}}>
@@ -31,7 +32,7 @@ const Info = (props: Props) => {
         </ImageList>
         <Typography variant="h1" fontWeight={'bold'} >{subtext}</Typography>
         <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px', md: '24px'}}>{description}</Typography>
-        {showBtn && <Button variant="contained" className="btn"> {btnText}</Button>}
+        {showBtn && <Button className={`btn ${btnClassname}`}> {btnText}</Button>}
       </Box>
     </Box>
   );

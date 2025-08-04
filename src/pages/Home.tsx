@@ -24,7 +24,7 @@ const Home = () => {
 
   setTimeout(() => {
     setLoader(false);
-  }, 5000);
+  }, 6000);
 
   return (
     <Box>
@@ -72,6 +72,7 @@ const Home = () => {
               className="info-container-green"
               showBtn
               btnText="Ver mapa"
+              btnClassname="btn-date"
               icon={regalo}
             />
           </Grid>
@@ -90,6 +91,7 @@ const Home = () => {
               className="info-container-golden"
               showBtn
               btnText="Ver mapa"
+              btnClassname="btn-outline "
               icon={regalo}
             />
           </Grid>
@@ -108,6 +110,7 @@ const Home = () => {
               className="info-container-golden"
               showBtn
               btnText="Ver alias"
+              btnClassname="btn-outline"
               icon={regalo}
             />
           </Grid>

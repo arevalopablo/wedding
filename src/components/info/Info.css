@@ -29,6 +29,18 @@
 .btn {
   width: 200px;
   margin: 20px auto 20px auto !important;
+  color: #fff !important;
+  background: none !important;
+}
+
+.btn-date {
+  /* border: 1px solid #07928e !important; */
+  background: #07928e !important;
+}
+
+.btn-outline {
+  border: 1px solid #fbf0c6 !important;
+ 
 }
 
 
