@@ -18,21 +18,21 @@ const Info = (props: Props) => {
   const { bgc, mainText, subtext, description, btnText, showBtn, className, btnClassname, icon  } = props;
 
   return (
-    <Box className={"info-section"} sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '430px', sm: '400px', md: '450px'}}}>
+    <Box className={"info-section"} data-aos='fade-up' data-aos-duration='400' sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '430px', sm: '400px', md: '450px'}}}>
       
-      <Box className={`info-container ${className}`} sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
+      <Box className={`info-container ${className}`} data-aos='fade-up' data-aos-duration='400' sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
         <Typography variant="h1" fontWeight={'bold'} >{mainText}</Typography>
         <ImageList sx={{width: '100px', m: '10px auto', display: 'flex'}}>
-          <ImageListItem >
+          <ImageListItem data-aos='fade'>
             <img
               src={icon}
               alt="icon"
             />
           </ImageListItem>
         </ImageList>
-        <Typography variant="h1" fontWeight={'bold'} >{subtext}</Typography>
-        <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px', md: '24px'}}>{description}</Typography>
-        {showBtn && <Button className={`btn ${btnClassname}`}> {btnText}</Button>}
+        <Typography variant="h1" fontWeight={'bold'}  data-aos='fade'>{subtext}</Typography>
+        <Typography variant="h2" fontWeight={'bold'} fontSize={{xs: '18px', md: '24px'}} data-aos='fade'>{description}</Typography>
+        {showBtn && <Button className={`btn ${btnClassname}`} data-aos='fade'> {btnText}</Button>}
       </Box>
     </Box>
   );

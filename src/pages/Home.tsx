@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
@@ -17,7 +17,8 @@ import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
 import Couple from "../assets/icons/Couple";
-import cs from '../audio/champagne Supernova.mp3'
+import cs from "../audio/champagne Supernova.mp3";
+import Player from "../components/player/Player";
 
 const Home = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -57,80 +58,75 @@ const Home = () => {
       )}
       {!loader && !loading && (
         <>
-          <Box width={'60px'} height={'60px'} borderRadius={'50%'} bgcolor={'#e8efe7'} position={'fixed'} bottom={'20px'} right={'20px'} zIndex={'1'}>
-            <Card>
-              <CardMedia component={'audio'} src={cs} autoPlay loop/>
-            </Card>
-          </Box>
-        <Grid container>
-          <Grid size={12}>
-            <Hero xsImg={foto} mdImg={foto2} />
+          <Player src={cs} />
+          <Grid container>
+            <Grid size={12}>
+              <Hero xsImg={foto} mdImg={foto2} />
+            </Grid>
+            <Grid size={12}>
+              <Timer />
+            </Grid>
+            {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
+            <Grid size={12}>
+              <Info
+                bgc={`url(${fondo})`}
+                mainText={"¿Cuándo?"}
+                subtext="12 Septiembre 2025"
+                description="Uruguay 753, CABA - 17:00 hs"
+                className="info-container-green"
+                showBtn
+                btnText="Ver mapa"
+                btnClassname="btn-date"
+                icon={regalo}
+              />
+            </Grid>
+            <Grid size={12}>
+              <Carousel arrayImg={pictures} />
+            </Grid>
+            <Grid size={12}>
+              <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
+            </Grid>
+            <Grid size={12}>
+              <Info
+                bgc={`url(${img})`}
+                mainText={"¿Dónde?"}
+                subtext="Il Sorpasso"
+                description="Humberto I° 478 - San Telmo"
+                className="info-container-golden"
+                showBtn
+                btnText="Ver mapa"
+                btnClassname="btn-outline "
+                icon={regalo}
+              />
+            </Grid>
+            <Grid size={12}>
+              <Carousel arrayImg={pictures} />
+            </Grid>
+            <Grid size={12}>
+              <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
+            </Grid>
+            <Grid size={12}>
+              <Info
+                bgc={`url(${gondole})`}
+                mainText="¿Regalo?"
+                subtext="Soñamos vivir en Italia..."
+                description="Ayudanos a cumplirlo!"
+                className="info-container-golden"
+                showBtn
+                btnText="Ver alias"
+                btnClassname="btn-outline"
+                icon={regalo}
+              />
+            </Grid>
+            <Grid size={12}>
+              <Carousel arrayImg={pictures} />
+            </Grid>
+            <Grid size={12}>
+              <Form />
+            </Grid>
           </Grid>
-          <Grid size={12}>
-            <Timer />
-          </Grid>
-          {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
-          <Grid size={12}>
-            <Info
-              bgc={`url(${fondo})`}
-              mainText={"¿Cuándo?"}
-              subtext="12 Septiembre 2025"
-              description="Uruguay 753, CABA - 17:00 hs"
-              className="info-container-green"
-              showBtn
-              btnText="Ver mapa"
-              btnClassname="btn-date"
-              icon={regalo}
-            />
-          </Grid>
-          <Grid size={12}>
-            <Carousel arrayImg={pictures} />
-          </Grid>
-          <Grid size={12}>
-            <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
-          </Grid>
-          <Grid size={12}>
-            <Info
-              bgc={`url(${img})`}
-              mainText={"¿Dónde?"}
-              subtext="Il Sorpasso"
-              description="Humberto I° 478 - San Telmo"
-              className="info-container-golden"
-              showBtn
-              btnText="Ver mapa"
-              btnClassname="btn-outline "
-              icon={regalo}
-            />
-          </Grid>
-          <Grid size={12}>
-            <Carousel arrayImg={pictures} />
-          </Grid>
-          <Grid size={12}>
-            <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
-          </Grid>
-          <Grid size={12}>
-            <Info
-              bgc={`url(${gondole})`}
-              mainText="¿Regalo?"
-              subtext="Soñamos vivir en Italia..."
-              description="Ayudanos a cumplirlo!"
-              className="info-container-golden"
-              showBtn
-              btnText="Ver alias"
-              btnClassname="btn-outline"
-              icon={regalo}
-            />
-          </Grid>
-          <Grid size={12}>
-            <Carousel arrayImg={pictures} />
-          </Grid>
-          <Grid size={12}>
-            <Form />
-          </Grid>
-        </Grid>
-      
         </>
-        )}
+      )}
     </Box>
   );
 };
