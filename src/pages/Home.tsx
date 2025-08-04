@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Card, CardMedia, Grid } from "@mui/material";
 import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
@@ -17,6 +17,7 @@ import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
 import Couple from "../assets/icons/Couple";
+import cs from '../audio/champagne Supernova.mp3'
 
 const Home = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -55,6 +56,12 @@ const Home = () => {
         </Grid>
       )}
       {!loader && !loading && (
+        <>
+          <Box width={'60px'} height={'60px'} borderRadius={'50%'} bgcolor={'#e8efe7'} position={'fixed'} bottom={'20px'} right={'20px'} zIndex={'1'}>
+            <Card>
+              <CardMedia component={'audio'} src={cs} autoPlay loop/>
+            </Card>
+          </Box>
         <Grid container>
           <Grid size={12}>
             <Hero xsImg={foto} mdImg={foto2} />
@@ -121,7 +128,9 @@ const Home = () => {
             <Form />
           </Grid>
         </Grid>
-      )}
+      
+        </>
+        )}
     </Box>
   );
 };
