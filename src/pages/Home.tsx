@@ -24,7 +24,7 @@ const Home = () => {
 
   setTimeout(() => {
     setLoader(false);
-  }, 50000);
+  }, 5000);
 
   return (
     <Box>
