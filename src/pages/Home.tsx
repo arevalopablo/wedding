@@ -69,7 +69,7 @@ const Home = () => {
             {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
             <Grid size={12}>
               <Info
-                bgc={`url(${fondo})`}
+                bgc={`#fff`}
                 mainText={"¿Cuándo?"}
                 subtext="12 Septiembre 2025"
                 description="Uruguay 753, CABA - 17:00 hs"

@@ -10,8 +10,7 @@ type Props = {
     btnText: string,
     showBtn: boolean,
     className: string;
-    btnClassname?: string
-    
+    btnClassname?: string   
 };
 
 const Info = (props: Props) => {
