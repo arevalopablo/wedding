@@ -5,7 +5,7 @@ import Carousel from "../components/carousel/Carousel";
 import { pictures } from "../components/carousel/images";
 import Info from "../components/info/Info";
 import img from "../assets/sorpasso.svg";
-import fondo from "../assets/fondo.jpg";
+// import fondo from "../assets/fondo.jpg";
 import Hero from "../components/hero/Hero";
 import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
