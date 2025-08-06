@@ -13,10 +13,10 @@
 }
 
 .info-container-green {
-  border-top: 5px double #07928e;
-  border-bottom: 2px solid #07928e;
-  color: #07928e;
-  background-image: url(../../assets/heart-green.svg) ;
+  border-top: 5px double #456556;
+  border-bottom: 2px solid #456556;
+  color: #456556;
+  background-image: url(../../assets/heart-dark-green.svg) ;
 }
 
 .info-container-golden {
@@ -34,13 +34,11 @@
 }
 
 .btn-date {
-  /* border: 1px solid #07928e !important; */
-  background: #07928e !important;
+  background: #456556 !important;
 }
 
 .btn-outline {
   border: 1px solid #fbf0c6 !important;
- 
 }
 
 

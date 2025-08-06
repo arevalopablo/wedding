@@ -5,14 +5,12 @@ import Carousel from "../components/carousel/Carousel";
 import { pictures } from "../components/carousel/images";
 import Info from "../components/info/Info";
 import img from "../assets/sorpasso.svg";
-// import fondo from "../assets/fondo.jpg";
 import Hero from "../components/hero/Hero";
 import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
-import regalo from "../assets/regalo.gif";
+import gift from "../assets/gift.gif";
 import foto from "../assets/hero.svg";
 import foto2 from "../assets/capri.jpg";
-// import welcomeImgMobile from "../assets/welcome-img-mobile.png";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
@@ -72,12 +70,12 @@ const Home = () => {
                 bgc={`#fff`}
                 mainText={"¿Cuándo?"}
                 subtext="12 Septiembre 2025"
-                description="Uruguay 753, CABA - 17:00 hs"
+                description="Uruguay 753, CABA - 17:30 hs"
                 className="info-container-green"
                 showBtn
                 btnText="Ver mapa"
                 btnClassname="btn-date"
-                icon={regalo}
+                icon={gift}
               />
             </Grid>
             <Grid size={12}>
@@ -96,7 +94,7 @@ const Home = () => {
                 showBtn
                 btnText="Ver mapa"
                 btnClassname="btn-outline "
-                icon={regalo}
+                icon={gift}
               />
             </Grid>
             <Grid size={12}>
@@ -115,7 +113,7 @@ const Home = () => {
                 showBtn
                 btnText="Ver alias"
                 btnClassname="btn-outline"
-                icon={regalo}
+                icon={gift}
               />
             </Grid>
             <Grid size={12}>

@@ -18,7 +18,7 @@ const Player = (props: Props) => {
       {booleano ? (
         <Pause
           style={{
-            fill: "#e8efe7",
+            fill: '#456556',
             height: "100%",
             width: "100%",
           }}
@@ -26,7 +26,7 @@ const Player = (props: Props) => {
       ) : (
         <Play
           style={{
-            fill: "#e8efe7",
+            fill: '#456556',
             height: "100%",
             width: "100%",
           }}

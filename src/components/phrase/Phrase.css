@@ -3,7 +3,7 @@
 .phrase-section {
   height: 250px;
   margin: 10px 0;
-  background: #07928E;
+  background: #7c9c8d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,15 +22,3 @@
   text-align: center;
 }
 
-.phrase {
-  animation: 2s fade-up ease;
-}
-
-@keyframes fade-up {
-  from {
-    transform: translate3d(0, 100px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}

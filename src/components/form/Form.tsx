@@ -6,18 +6,19 @@ const Form = () => {
   const { formik, formTypes } = useForm();
 
   return (
-    <Box className="form-section">
+    <Box className="form-section" >
       <Box
+        data-aos='fade-up'
         sx={{
           width: "100%",
           m: "0 auto",
           p: {xs:"60px 0 0 0", sm: '60px 30px 0 30px', md: '130px 0 0 0', lg: '0'},
         }}
       >
-        <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}>
+        <Typography variant="h1" sx={{ color: "#07928E", mb: "10px", textAlign: 'center' }}data-aos='fade-up'>
           ¡Confirmá tu asistencia!
         </Typography>
-        <Typography variant="h2" sx={{ color: "#07928E" , textAlign: 'center'}}>
+        <Typography variant="h2" sx={{ color: "#07928E" , textAlign: 'center'}}data-aos='fade-up'>
           antes del 01 de Septiembre 2025
         </Typography>
 
@@ -29,7 +30,7 @@ const Form = () => {
           width={{ xs: "90%", sm: "60%", md: "40%", lg: "30%" }}
           m={"30px auto"}
           onSubmit={formik.handleSubmit}
-          
+          data-aos='fade-up'
         >
           {Object.keys(formik.values).map((key, index) => (
             <TextField
