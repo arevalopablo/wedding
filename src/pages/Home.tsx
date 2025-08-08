@@ -17,13 +17,14 @@ import { useState } from "react";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import Player from "../components/player/Player";
-import Modal from "../components/map/Modal";
+import Modal from "../components/modal/Modal";
+// import data from '../data/data.json'
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
   const [loader, setLoader] = useState<boolean>(false);
-  const [showMode, setShowMode] = useState<boolean>(false)
-  const [showModal, setShowModal] = useState<boolean>(false)
+  const [location, setLocation] = useState<string>('');
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   setTimeout(() => {
     setLoader(false);
@@ -60,7 +61,14 @@ const Home = () => {
       {!loader && !welcomeScreen && (
         <>
           <Player src={cs} />
-            {showMode && showModal && <Modal onClick={() => {setShowModal(false), setShowMode(false)}}/>}
+          { showModal && (
+            <Modal
+              src={location}
+              onClick={() => {
+                setShowModal(false);
+              }}
+            />
+          )}
           <Grid container>
             <Grid size={12}>
               <Hero xsImg={foto} mdImg={foto2} />
@@ -80,7 +88,9 @@ const Home = () => {
                 btnText="Ver mapa"
                 btnClassname="btn-date"
                 icon={gift}
-                onClick={() => {setShowMode(true), setShowModal(true)}}
+                onClick={() => {
+                  setShowModal(true), setLocation('registroCivil');
+                }}
               />
             </Grid>
             <Grid size={12}>
@@ -100,7 +110,9 @@ const Home = () => {
                 btnText="Ver mapa"
                 btnClassname="btn-outline "
                 icon={gift}
-                
+                onClick={() => {
+                  setShowModal(true), setLocation('ilSorpasso');
+                }}
               />
             </Grid>
             <Grid size={12}>
@@ -120,6 +132,7 @@ const Home = () => {
                 btnText="Ver alias"
                 btnClassname="btn-outline"
                 icon={gift}
+                
               />
             </Grid>
             <Grid size={12}>

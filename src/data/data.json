@@ -1,0 +1,10 @@
+{
+  "locations": {
+    "registroCivil": {
+      "address": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.09760050846205!2d-58.38667742519916!3d-34.59979281466889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac70d526ae3%3A0x37aa9757a93e89f0!2sRegistro%20Civil%20Central!5e0!3m2!1ses-419!2sar!4v1754613873159!5m2!1ses-419!2sar"
+    },
+    "ilSorpasso": {
+      "address": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.343391661359!2d-58.37740631843239!3d-34.620761588629065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2cb9975a07%3A0xe5276dfc6742d89b!2sIl%20Sorpasso%20Ristorante!5e0!3m2!1ses-419!2sar!4v1754618879516!5m2!1ses-419!2sar"
+    }
+  }
+}
