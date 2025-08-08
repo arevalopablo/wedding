@@ -17,10 +17,13 @@ import { useState } from "react";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import Player from "../components/player/Player";
+import Modal from "../components/map/Modal";
 
 const Home = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
   const [loader, setLoader] = useState<boolean>(false);
+  const [showMode, setShowMode] = useState<boolean>(false)
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   setTimeout(() => {
     setLoader(false);
@@ -28,7 +31,7 @@ const Home = () => {
 
   return (
     <Box>
-      {loading && !loader && (
+      {welcomeScreen && !loader && (
         <Hero
           xsImg={welcomeImgTablet}
           mdImg={welcomeImgTablet}
@@ -36,7 +39,7 @@ const Home = () => {
           welcomeScreen
           showBtn
           onClick={() => {
-            setLoading(false), setLoader(true);
+            setWelcomeScreen(false), setLoader(true);
           }}
         />
       )}
@@ -54,9 +57,10 @@ const Home = () => {
           </Grid>
         </Grid>
       )}
-      {!loader && !loading && (
+      {!loader && !welcomeScreen && (
         <>
           <Player src={cs} />
+            {showMode && showModal && <Modal onClick={() => {setShowModal(false), setShowMode(false)}}/>}
           <Grid container>
             <Grid size={12}>
               <Hero xsImg={foto} mdImg={foto2} />
@@ -68,14 +72,15 @@ const Home = () => {
             <Grid size={12}>
               <Info
                 bgc={`#fff`}
+                className="info-container-green"
                 mainText={"¿Cuándo?"}
                 subtext="12 Septiembre 2025"
                 description="Uruguay 753, CABA - 17:30 hs"
-                className="info-container-green"
                 showBtn
                 btnText="Ver mapa"
                 btnClassname="btn-date"
                 icon={gift}
+                onClick={() => {setShowMode(true), setShowModal(true)}}
               />
             </Grid>
             <Grid size={12}>
@@ -95,6 +100,7 @@ const Home = () => {
                 btnText="Ver mapa"
                 btnClassname="btn-outline "
                 icon={gift}
+                
               />
             </Grid>
             <Grid size={12}>
