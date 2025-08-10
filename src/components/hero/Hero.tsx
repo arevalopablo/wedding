@@ -16,10 +16,10 @@ const Hero = (props: Props) => {
 
   return (
     <Box
-      data-aos='fade-up'
+      // data-aos='fade-up'
       display={'flex'} flexDirection={'column'} justifyContent={'flex-end'} 
       sx={{
-        height: { xs: welcomeScreen ? '100vh' : '430px', sm: welcomeScreen ? '100vh' : '600px', md: "100vh" },
+        height: { xs: welcomeScreen ? '100vh' : '100vh', sm: welcomeScreen ? '100vh' : '600px', md: "100vh" },
         background: { xs: `url(${xsImg})`, sm: `url(${mdImg})`, md: `url(${lgImg})`, lg: `url(${lgImg})` },
         backgroundRepeat: {xs: 'no-repeat', sm: 'no-repeat', lg: 'no-repeat'},
         backgroundSize: { xs: "cover", sm: 'cover', md: "cover", lg: 'cover' },

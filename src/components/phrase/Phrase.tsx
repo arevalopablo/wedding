@@ -9,7 +9,7 @@ const Phrase = (props: Props) => {
   const { phrase } = props;
   
   return (
-    <Box className={"phrase-section "}>
+    <Box className={"phrase-section "} p={{xs: '0', md: '30px'}}>
       <Box className={"phrase-container phrase"} data-aos='fade-up'>
         <Typography className="" variant="h3" fontWeight={'bold'}>{phrase}</Typography>
       </Box>
