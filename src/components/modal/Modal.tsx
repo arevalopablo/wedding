@@ -5,7 +5,7 @@ import data from "../../data/data.json";
 type Props = {
   // [key:string]:any,
   onClick: () => void;
-  src: string;
+  src?: string;
   isMap: boolean;
   icon?: string;
 };
@@ -25,12 +25,13 @@ const Modal = (props: Props) => {
             component={"iframe"}
             // src={`${data.locations[src].address}`}
             src={`${data.locations.registroCivil.address}`} //CAMBIAR PARA QUE SEA DINAMICO
+            alignItems={src}//ESTA LINEA NO VA, ES SOLO PARA QUE NO TIRE ERROR !!!!
             sx={{ border: "0", width: "100%", height: "100%" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></Box>
         ) : (
-          <Box className="alias-section">
+          <Box className="alias-section" >
             <Box className="alias-container">
               <Typography variant="h1">¿Regalo?</Typography>
               <ImageList
@@ -41,7 +42,7 @@ const Modal = (props: Props) => {
                 </ImageListItem>
               </ImageList>
               <Typography variant="h2">
-               ¡¡Nuestro mejor regalo es tu presencia en el momento más importante de nuestras vidas!! Aún así, si deseás contribuir para cumplir nuestro sueño, te dejamos nuestro alias.
+               ¡¡El mejor regalo es tu presencia en el día más importante de nuestras vidas!! Aún así, si deseás contribuir para cumplir nuestro sueño, te dejamos nuestro alias.
               </Typography>
               <Box>
                 <Typography variant="h1">Alias</Typography>

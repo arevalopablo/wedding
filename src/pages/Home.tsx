@@ -14,11 +14,15 @@ import foto2 from "../assets/capri.jpg";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
-import Couple from "../assets/icons/couple/Couple";
+import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import Player from "../components/player/Player";
 import Modal from "../components/modal/Modal";
 // import data from '../data/data.json'
+import timelineMobile from '../assets/timeline-mobile.png'
+// import timelineTablet from '../assets/timeline-tablet.png'
+import timelineDesktop from '../assets/timeline-desktop.png'
+import Timeline from "../components/timeline/Timeline";
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -27,13 +31,26 @@ const Home = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [isMap, setIsMap] = useState<boolean>(true);
 
-  // setTimeout(() => {
-  //   setLoader(false);
-  // }, 6000);
+  setTimeout(() => {
+    setLoader(false);
+  }, 6000);
 
   return (
     <Box>
       {welcomeScreen && !loader && (
+        <Hero
+          xsImg={welcomeImgTablet}
+          mdImg={welcomeImgTablet}
+          lgImg={welcomeImgDesktop}
+          welcomeScreen
+          showBtn
+          onClick={() => {
+            setWelcomeScreen(false), setLoader(true);
+          }}
+        />
+      )}
+
+      {loader && (
         <Grid container>
           <Grid
             size={12}
@@ -42,32 +59,8 @@ const Home = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Couple onClick={() => setWelcomeScreen(false)}/>
-          </Grid>
-        </Grid>
-        // <Hero
-        //   xsImg={welcomeImgTablet}
-        //   mdImg={welcomeImgTablet}
-        //   lgImg={welcomeImgDesktop}
-        //   welcomeScreen
-        //   showBtn
-        //   onClick={() => {
-        //     setWelcomeScreen(false), setLoader(true);
-        //   }}
-        // />
-      )}
-
-      {loader && (
-        <Grid container>
-          {/* <Grid
-            size={12}
-            height={"100vh"}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
             <Couple />
-          </Grid> */}
+          </Grid>
         </Grid>
       )}
       {!loader && !welcomeScreen && (
@@ -77,6 +70,7 @@ const Home = () => {
             <Modal
               isMap={isMap}
               src={location}
+              icon={gift}
               onClick={() => {
                 setShowModal(false), setLocation(""), setIsMap(true);
               }}
@@ -101,6 +95,7 @@ const Home = () => {
                 showBtn
                 btnText="Ver mapa"
                 btnClassname="btn-date"
+                showIcon
                 icon={gift}
                 onClick={() => {
                   setShowModal(true), setLocation("registroCivil");
@@ -110,6 +105,7 @@ const Home = () => {
             <Grid size={12}>
               <Carousel arrayImg={pictures} />
             </Grid>
+           
             <Grid size={12}>
               <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
             </Grid>
@@ -123,6 +119,7 @@ const Home = () => {
                 showBtn
                 btnText="Ver mapa"
                 btnClassname="btn-outline "
+                showIcon
                 icon={gift}
                 onClick={() => {
                   setShowModal(true), setLocation("ilSorpasso");
@@ -131,6 +128,9 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Carousel arrayImg={pictures} />
+            </Grid>
+             <Grid size={12}>
+              <Timeline timelineMobile={timelineMobile}  timelineDesktop={timelineDesktop}/>
             </Grid>
             <Grid size={12}>
               <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
@@ -145,6 +145,7 @@ const Home = () => {
                 showBtn
                 btnText="Ver alias"
                 btnClassname="btn-outline"
+                showIcon
                 icon={gift}
                 onClick={() => {
                   setShowModal(true), setIsMap(false);
@@ -156,6 +157,9 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Form />
+            </Grid>
+            <Grid size={12}>
+              <Info mainText="¿Dress code?" subtext="Elegante sport" description="El color BLANCO solo es para la novia! Por favor evitar este color. Gracias"  className="info-container-green" bgc="#e8efe7" showIcon icon={gift} />
             </Grid>
           </Grid>
         </>

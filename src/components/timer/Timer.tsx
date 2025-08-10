@@ -10,7 +10,7 @@ const Timer = () => {
   }
 
   return (
-    <Box className={"timer-section"} >
+    <Box className={"timer-section"} data-aos='fade-up' mt={'30px'}>
       <Box className='timer-maru-pablo' data-aos='fade-up' width={{xs: '95%', sm: '70%', md: '80%', lg: '65%'}} p={{xs: '50px 0', md: '50px'}}>
         <Box display={"flex"} flexDirection={{xs: 'column', md: 'row'}} justifyContent={{md: 'center'}} alignItems={{md: 'center'}} data-aos='fade-up'>
         {['Maru', '&', 'Pablo'].map((name, index) => (
