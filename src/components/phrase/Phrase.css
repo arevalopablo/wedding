@@ -3,11 +3,11 @@
 .phrase-section {
   height: 250px;
   margin: 10px 0;
-  /* background: #7c9c8d; */
   background: #537364;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
 .phrase-container {

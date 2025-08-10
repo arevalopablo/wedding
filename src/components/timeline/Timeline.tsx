@@ -11,6 +11,7 @@ const Timeline = (props: Props) => {
 
   return (
     <Box
+      data-aos='fade-up' data-aos-duration='400'
       sx={{
         background: {
           xs: `url(${timelineMobile}) #faf6ec`,

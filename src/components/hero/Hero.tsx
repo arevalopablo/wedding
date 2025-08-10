@@ -8,13 +8,15 @@ type Props = {
   welcomeScreen?: boolean
   showBtn?: boolean;
   onClick?: () => void;
+  array?: string []
 };
 
 const Hero = (props: Props) => {
-  const { xsImg, mdImg, lgImg, welcomeScreen, showBtn, onClick } = props;
+  const { xsImg, mdImg, lgImg, welcomeScreen, showBtn, onClick, array } = props;
 
   return (
     <Box
+      data-aos='fade-up'
       display={'flex'} flexDirection={'column'} justifyContent={'flex-end'} 
       sx={{
         height: { xs: welcomeScreen ? '100vh' : '430px', sm: welcomeScreen ? '100vh' : '600px', md: "100vh" },
@@ -26,14 +28,14 @@ const Hero = (props: Props) => {
 
       }}
     >
-      {showBtn && 
+      {welcomeScreen && 
         <Box className='welcome-screen-section'>
           <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-            {['Maru', '&', 'Pablo'].map((name, index) => (
+            {array?.map((name, index) => (
               <Typography className={`showText${index + 1}`} key={index} variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: name === '&' ? {xs: '40px !important', sm: '50px !important', md: '60px !important'} : {xs: '60px !important', sm: '70px !important', md:'70px !important', lg: '80px !important'}, pt: '20px', mr: '12px', opacity: '0'}}>{name}</Typography>
             ))}
           </Box>
-          <Button className="btn-hero" onClick={onClick}>Ingresar</Button>
+          {showBtn && <Button className="btn-hero" onClick={onClick}>Ingresar</Button>}
         </Box>
       }
     </Box>

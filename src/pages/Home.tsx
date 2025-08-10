@@ -19,9 +19,9 @@ import cs from "../audio/champagne Supernova.mp3";
 import Player from "../components/player/Player";
 import Modal from "../components/modal/Modal";
 // import data from '../data/data.json'
-import timelineMobile from '../assets/timeline-mobile.png'
+import timelineMobile from "../assets/timeline-mobile.png";
 // import timelineTablet from '../assets/timeline-tablet.png'
-import timelineDesktop from '../assets/timeline-desktop.png'
+import timelineDesktop from "../assets/timeline-desktop.png";
 import Timeline from "../components/timeline/Timeline";
 
 const Home = () => {
@@ -43,6 +43,7 @@ const Home = () => {
           mdImg={welcomeImgTablet}
           lgImg={welcomeImgDesktop}
           welcomeScreen
+          array={["Maru", "&", "Pablo"]}
           showBtn
           onClick={() => {
             setWelcomeScreen(false), setLoader(true);
@@ -105,7 +106,7 @@ const Home = () => {
             <Grid size={12}>
               <Carousel arrayImg={pictures} />
             </Grid>
-           
+
             <Grid size={12}>
               <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
             </Grid>
@@ -129,8 +130,11 @@ const Home = () => {
             <Grid size={12}>
               <Carousel arrayImg={pictures} />
             </Grid>
-             <Grid size={12}>
-              <Timeline timelineMobile={timelineMobile}  timelineDesktop={timelineDesktop}/>
+            <Grid size={12}>
+              <Timeline
+                timelineMobile={timelineMobile}
+                timelineDesktop={timelineDesktop}
+              />
             </Grid>
             <Grid size={12}>
               <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
@@ -155,11 +159,32 @@ const Home = () => {
             <Grid size={12}>
               <Carousel arrayImg={pictures} />
             </Grid>
+
+            <Grid size={12}>
+              <Info
+                mainText="¿Dress code?"
+                subtext="Elegante sport"
+                description="El color BLANCO solo es para la novia! Por favor evitar este color. Gracias"
+                className="info-container-green"
+                bgc=""
+                showIcon
+                icon={gift}
+              />
+            </Grid>
             <Grid size={12}>
               <Form />
             </Grid>
             <Grid size={12}>
-              <Info mainText="¿Dress code?" subtext="Elegante sport" description="El color BLANCO solo es para la novia! Por favor evitar este color. Gracias"  className="info-container-green" bgc="#e8efe7" showIcon icon={gift} />
+              <Phrase phrase="Esta invitación digital fue hecha con mucha dedicación y amor. Apreciamos y esperamos que nos des tu opinión. Gracias" />
+            </Grid>
+            <Grid size={12}>
+              <Hero
+                xsImg={welcomeImgTablet}
+                mdImg={welcomeImgTablet}
+                lgImg={welcomeImgDesktop}
+                welcomeScreen
+                array={["Maru", "&", "Pablo"]}
+              />
             </Grid>
           </Grid>
         </>
