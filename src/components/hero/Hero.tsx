@@ -23,6 +23,7 @@ const Hero = (props: Props) => {
         backgroundSize: { xs: "cover", sm: 'cover', md: "cover", lg: 'cover' },
         backgroundPosition: { xs: "center", sm: welcomeScreen ? 'top' : 'center', md: "center", lg: '0 -150px' },
         filter: { md: "grayscale(1)"}, //SE QUEDA DEPENDIENDO DE LA IMAGEN QUE SE ELIJA
+
       }}
     >
       {showBtn && 
