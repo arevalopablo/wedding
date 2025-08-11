@@ -10,7 +10,7 @@ import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
 import gift from "../assets/gift.gif";
 // import foto from "../assets/hero.svg";
-import heroMobile from '../assets/hero-mobile3.svg'
+import heroMobile from '../assets/hero-mobile.svg'
 import foto2 from "../assets/capri.jpg";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
