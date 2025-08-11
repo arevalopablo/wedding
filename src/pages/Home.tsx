@@ -9,8 +9,9 @@ import Hero from "../components/hero/Hero";
 import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
 import gift from "../assets/gift.gif";
-// import foto from "../assets/hero.svg";
-import heroMobile from '../assets/hero-mobile.svg'
+import heroMobile from '../assets/hero-mobile-500.svg'
+import heroTablet from '../assets/hero-tablet.svg'
+// import heroDesktop from '../assets/hero-16.svg'
 import foto2 from "../assets/capri.jpg";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
@@ -81,7 +82,7 @@ const Home = () => {
           {}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={heroMobile} mdImg={foto2} lgImg={foto2} />
+              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={foto2} />
             </Grid>
             <Grid size={12}>
               <Timer />

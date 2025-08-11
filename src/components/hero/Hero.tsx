@@ -19,10 +19,10 @@ const Hero = (props: Props) => {
       // data-aos='fade-up'
       display={'flex'} flexDirection={'column'} justifyContent={'flex-end'} 
       sx={{
-        height: { xs: welcomeScreen ? '100vh' : '100vh', sm: welcomeScreen ? '100vh' : '600px', md: "100vh" },
+        height: '100vh',
         background: { xs: `url(${xsImg})`, sm: `url(${mdImg})`, md: `url(${lgImg})`, lg: `url(${lgImg})` },
         backgroundRepeat: {xs: 'no-repeat', sm: 'no-repeat', lg: 'no-repeat'},
-        backgroundSize: { xs: "cover", sm: 'cover', md: "cover", lg: 'cover' },
+        backgroundSize: { xs: 'cover', sm: 'cover', md: "cover", lg: 'cover' },
         backgroundPosition: { xs: "center", sm: welcomeScreen ? 'top' : 'center', md: "center", lg: welcomeScreen ? '0 -150px' : '0 -220px' },
         filter: { md: "grayscale(1)"}, //SE QUEDA DEPENDIENDO DE LA IMAGEN QUE SE ELIJA
 
