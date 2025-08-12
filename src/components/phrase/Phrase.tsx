@@ -11,7 +11,7 @@ const Phrase = (props: Props) => {
   return (
     <Box className={"phrase-section "} p={{xs: '0', md: '30px'}}>
       <Box className={"phrase-container phrase"} data-aos='fade-up'>
-        <Typography className="" variant="h3" fontWeight={'bold'}>{phrase}</Typography>
+        <Typography className="" variant="h3" fontWeight={'500'}>{phrase}</Typography>
       </Box>
     </Box>
   );

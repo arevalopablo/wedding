@@ -23,7 +23,7 @@ import Modal from "../components/modal/Modal";
 // import data from '../data/data.json'
 import timelineMobile from "../assets/timeline-mobile.png";
 import timelineTablet from '../assets/timeline-tablet.png'
-import timelineDesktop from "../assets/timeline-desktop-2.png";
+import timelineDesktop from "../assets/timeline-desktop.png";
 import Timeline from "../components/timeline/Timeline";
 
 const Home = () => {
@@ -110,7 +110,7 @@ const Home = () => {
             </Grid>
 
             <Grid size={12}>
-              <Phrase phrase="Cuando menos lo esperas, una buena persona llega a tu vida para mejorarlo todo." />
+              <Phrase phrase='"Nada es más hermoso que celebrar el amor rodeados de quienes amamos"' />
             </Grid>
             <Grid size={12}>
               <Info
