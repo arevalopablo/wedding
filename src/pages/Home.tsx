@@ -9,9 +9,9 @@ import Hero from "../components/hero/Hero";
 import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
 import gift from "../assets/gift.gif";
-import heroMobile from '../assets/hero-mobile-500.svg'
+import heroMobile from '../assets/hero-mobile.svg'
 import heroTablet from '../assets/hero-tablet.svg'
-// import heroDesktop from '../assets/hero-16.svg'
+
 import foto2 from "../assets/capri.jpg";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
@@ -22,8 +22,8 @@ import Player from "../components/player/Player";
 import Modal from "../components/modal/Modal";
 // import data from '../data/data.json'
 import timelineMobile from "../assets/timeline-mobile.png";
-// import timelineTablet from '../assets/timeline-tablet.png'
-import timelineDesktop from "../assets/timeline-desktop.png";
+import timelineTablet from '../assets/timeline-tablet.png'
+import timelineDesktop from "../assets/timeline-desktop-2.png";
 import Timeline from "../components/timeline/Timeline";
 
 const Home = () => {
@@ -135,6 +135,7 @@ const Home = () => {
             <Grid size={12}>
               <Timeline
                 timelineMobile={timelineMobile}
+                timelineTablet={timelineTablet}
                 timelineDesktop={timelineDesktop}
               />
             </Grid>
