@@ -1,9 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
-import useClock from "./useClock";
-import "./Timer.css";
+import "./Countdown.css";
+import useCountdown from "./useCountdown";
 
-const Timer = () => {
-  const { time, finish } = useClock();
+const Countdown = () => {
+  const { time, finish } = useCountdown();
 
   if (finish) {
     return <h1>¡¡¡HOY NOS CASAMOS!!!</h1>;
@@ -50,4 +50,4 @@ const Timer = () => {
   );
 };
 
-export default Timer;
+export default Countdown;

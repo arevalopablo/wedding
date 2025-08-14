@@ -16,7 +16,6 @@ const Hero = (props: Props) => {
 
   return (
     <Box
-      // data-aos='fade-up'
       display={'flex'} flexDirection={'column'} justifyContent={'flex-end'} 
       sx={{
         height: '100vh',
@@ -24,8 +23,6 @@ const Hero = (props: Props) => {
         backgroundRepeat: {xs: 'no-repeat', sm: 'no-repeat', lg: 'no-repeat'},
         backgroundSize: { xs: 'cover', sm: 'cover', md: "cover", lg: 'cover' },
         backgroundPosition: { xs: "center", sm: welcomeScreen ? 'top' : 'center', md: "center", lg: welcomeScreen ? '0 -150px' : '0 -220px' },
-        filter: { md: "grayscale(1)"}, //SE QUEDA DEPENDIENDO DE LA IMAGEN QUE SE ELIJA
-
       }}
     >
       {welcomeScreen && 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Time, TimeValues } from "./interfaces";
 
-const useClock = () => {
+const useCountdown = () => {
   const [time, setTime] = useState<Time>({
     segundos: 0,
     minutos: 0,
@@ -57,4 +57,4 @@ const useClock = () => {
   };
 };
 
-export default useClock;
+export default useCountdown;

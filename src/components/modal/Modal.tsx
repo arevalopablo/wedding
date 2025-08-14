@@ -3,15 +3,14 @@ import "./Modal.css";
 import data from "../../data/data.json";
 
 type Props = {
-  // [key:string]:any,
   onClick: () => void;
-  src?: string;
+  location: boolean;
   isMap: boolean;
   icon?: string;
 };
 
 const Modal = (props: Props) => {
-  const { onClick, src, isMap, icon } = props;
+  const { onClick, isMap, icon, location } = props;
 
   return (
     <Box className="modal-section">
@@ -23,9 +22,7 @@ const Modal = (props: Props) => {
         {isMap ? (
           <Box
             component={"iframe"}
-            // src={`${data.locations[src].address}`}
-            src={`${data.locations.registroCivil.address}`} //CAMBIAR PARA QUE SEA DINAMICO
-            alignItems={src}//ESTA LINEA NO VA, ES SOLO PARA QUE NO TIRE ERROR !!!!
+            src={ location ? `${data.locations.registroCivil.address}` : `${data.locations.ilSorpasso.address}`}
             sx={{ border: "0", width: "100%", height: "100%" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

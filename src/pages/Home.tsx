@@ -1,18 +1,16 @@
 import { Box, Grid } from "@mui/material";
-import Timer from "../components/timer/Timer";
 import Phrase from "../components/phrase/Phrase";
 import Carousel from "../components/carousel/Carousel";
-import { pictures } from "../components/carousel/images";
+import { carrousel1, carrousel2, carrousel3 } from "../components/carousel/images";
 import Info from "../components/info/Info";
 import img from "../assets/sorpasso.svg";
 import Hero from "../components/hero/Hero";
 import gondole from "../assets/gondole.jpg";
 import Form from "../components/form/Form";
 import gift from "../assets/gift.gif";
-import heroMobile from '../assets/hero-mobile.svg'
-import heroTablet from '../assets/hero-tablet.svg'
-
-import foto2 from "../assets/capri.jpg";
+import heroMobile from "../assets/hero-mobile.svg";
+import heroTablet from "../assets/hero-tablet.svg";
+import capri from "../assets/capri2.png";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 import { useState } from "react";
@@ -22,14 +20,15 @@ import Player from "../components/player/Player";
 import Modal from "../components/modal/Modal";
 // import data from '../data/data.json'
 import timelineMobile from "../assets/timeline-mobile.png";
-import timelineTablet from '../assets/timeline-tablet.png'
+import timelineTablet from "../assets/timeline-tablet.png";
 import timelineDesktop from "../assets/timeline-desktop.png";
 import Timeline from "../components/timeline/Timeline";
+import Countdown from "../components/countdown/Countdown";
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
   const [loader, setLoader] = useState<boolean>(false);
-  const [location, setLocation] = useState<string>("");
+  const [location, setLocation] = useState<boolean>(true);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [isMap, setIsMap] = useState<boolean>(true);
 
@@ -72,20 +71,20 @@ const Home = () => {
           {showModal && (
             <Modal
               isMap={isMap}
-              src={location}
+              location={location}
               icon={gift}
               onClick={() => {
-                setShowModal(false), setLocation(""), setIsMap(true);
+                setShowModal(false), setIsMap(true), setLocation(true);
               }}
             />
           )}
           {}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={foto2} />
+              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
             </Grid>
             <Grid size={12}>
-              <Timer />
+              <Countdown />
             </Grid>
             {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
             <Grid size={12}>
@@ -101,12 +100,12 @@ const Home = () => {
                 showIcon
                 icon={gift}
                 onClick={() => {
-                  setShowModal(true), setLocation("registroCivil");
+                  setShowModal(true);
                 }}
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={pictures} />
+              <Carousel arrayImg={carrousel1} />
             </Grid>
 
             <Grid size={12}>
@@ -125,12 +124,12 @@ const Home = () => {
                 showIcon
                 icon={gift}
                 onClick={() => {
-                  setShowModal(true), setLocation("ilSorpasso");
+                  setShowModal(true), setLocation(false);
                 }}
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={pictures} />
+              <Carousel arrayImg={carrousel2} />
             </Grid>
             <Grid size={12}>
               <Timeline
@@ -140,7 +139,7 @@ const Home = () => {
               />
             </Grid>
             <Grid size={12}>
-              <Phrase phrase="Cause all of the stars are fading away, just try not to worry. You'll see them someday" />
+              <Phrase phrase='"Hoy comenzamos un nuevo capítulo, y ustedes son las páginas más queridas de nuestra historia"' />
             </Grid>
             <Grid size={12}>
               <Info
@@ -160,7 +159,7 @@ const Home = () => {
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={pictures} />
+              <Carousel arrayImg={carrousel3} />
             </Grid>
 
             <Grid size={12}>
@@ -178,7 +177,7 @@ const Home = () => {
               <Form />
             </Grid>
             <Grid size={12}>
-              <Phrase phrase="Esta invitación digital fue hecha con mucha dedicación y amor. Apreciamos y esperamos que nos des tu opinión. Gracias" />
+              <Phrase phrase='"Gracias por ser parte de nuestra alegría y por hacer de esta noche un recuerdo eterno"' />
             </Grid>
             <Grid size={12}>
               <Hero
