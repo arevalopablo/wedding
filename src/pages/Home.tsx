@@ -1,29 +1,11 @@
 import { Box, Grid } from "@mui/material";
-import Phrase from "../components/phrase/Phrase";
-import Carousel from "../components/carousel/Carousel";
-import { carrousel1, carrousel2, carrousel3 } from "../components/carousel/images";
-import Info from "../components/info/Info";
-import img from "../assets/sorpasso.svg";
-import Hero from "../components/hero/Hero";
-import gondole from "../assets/gondole.jpg";
-import Form from "../components/form/Form";
-import gift from "../assets/gift.gif";
-import heroMobile from "../assets/hero-mobile.svg";
-import heroTablet from "../assets/hero-tablet.svg";
-import capri from "../assets/capri2.png";
-import welcomeImgTablet from "../assets/welcome-img-tablet.png";
-import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
-import { useState } from "react";
+import { Hero, Carousel, Countdown, Info, Modal, Phrase, Player, Timeline } from "../components/components";
+import { carousel1, carousel2, carousel3 } from "../components/carousel/images";
+import { calendar, discoball, marriage, travel } from "../assets/icons/gif";
+import { capri, gondole50, heroMobile, heroTablet, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet } from "../assets/assets";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
-import Player from "../components/player/Player";
-import Modal from "../components/modal/Modal";
-// import data from '../data/data.json'
-import timelineMobile from "../assets/timeline-mobile.png";
-import timelineTablet from "../assets/timeline-tablet.png";
-import timelineDesktop from "../assets/timeline-desktop.png";
-import Timeline from "../components/timeline/Timeline";
-import Countdown from "../components/countdown/Countdown";
+import { useState } from "react";
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -72,13 +54,12 @@ const Home = () => {
             <Modal
               isMap={isMap}
               location={location}
-              icon={gift}
+              icon={travel}
               onClick={() => {
                 setShowModal(false), setIsMap(true), setLocation(true);
               }}
             />
           )}
-          {}
           <Grid container>
             <Grid size={12}>
               <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
@@ -86,7 +67,6 @@ const Home = () => {
             <Grid size={12}>
               <Countdown />
             </Grid>
-            {/* <Grid size={12} bgcolor={'#2A2D34'}> NEGRO */}
             <Grid size={12}>
               <Info
                 bgc={`#fff`}
@@ -98,14 +78,14 @@ const Home = () => {
                 btnText="Ver mapa"
                 btnClassname="btn-date"
                 showIcon
-                icon={gift}
+                icon={calendar}
                 onClick={() => {
                   setShowModal(true);
                 }}
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={carrousel1} />
+              <Carousel arrayImg={carousel1} />
             </Grid>
 
             <Grid size={12}>
@@ -113,7 +93,7 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Info
-                bgc={`url(${img})`}
+                bgc={`url(${sorpasso})`}
                 mainText={"¿Dónde?"}
                 subtext="Il Sorpasso"
                 description="Humberto I° 478 - San Telmo"
@@ -122,14 +102,14 @@ const Home = () => {
                 btnText="Ver mapa"
                 btnClassname="btn-outline "
                 showIcon
-                icon={gift}
+                icon={discoball}
                 onClick={() => {
                   setShowModal(true), setLocation(false);
                 }}
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={carrousel2} />
+              <Carousel arrayImg={carousel2} />
             </Grid>
             <Grid size={12}>
               <Timeline
@@ -143,23 +123,23 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Info
-                bgc={`url(${gondole})`}
+                bgc={`url(${gondole50})`}
                 mainText="¿Regalo?"
                 subtext="Soñamos vivir en Italia..."
                 description="Ayudanos a cumplirlo!"
                 className="info-container-golden"
                 showBtn
-                btnText="Ver alias"
+                btnText="Contribuir"
                 btnClassname="btn-outline"
                 showIcon
-                icon={gift}
+                icon={travel}
                 onClick={() => {
                   setShowModal(true), setIsMap(false);
                 }}
               />
             </Grid>
             <Grid size={12}>
-              <Carousel arrayImg={carrousel3} />
+              <Carousel arrayImg={carousel3} />
             </Grid>
 
             <Grid size={12}>
@@ -167,15 +147,16 @@ const Home = () => {
                 mainText="¿Dress code?"
                 subtext="Elegante sport"
                 description="El color BLANCO solo es para la novia! Por favor evitar este color. Gracias"
+                showBtn
                 className="info-container-green"
                 bgc=""
                 showIcon
-                icon={gift}
+                icon={marriage}
               />
             </Grid>
-            <Grid size={12}>
+            {/* <Grid size={12}>
               <Form />
-            </Grid>
+            </Grid> */}
             <Grid size={12}>
               <Phrase phrase='"Gracias por ser parte de nuestra alegría y por hacer de esta noche un recuerdo eterno"' />
             </Grid>

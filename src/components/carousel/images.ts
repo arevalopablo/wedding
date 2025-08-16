@@ -15,8 +15,8 @@ import universal2 from '../../assets/carrousel-img/universal2.jpg'
 import venice from '../../assets/carrousel-img/venice.jpg'
 import venice2 from '../../assets/carrousel-img/venice2.jpg'
 
-const carrousel1 = [amsterdam, london, montmartre, jujuy]
-const carrousel2 = [amsterdam3, venice,  angostura, oasis]
-const carrousel3 = [jujuy, venice2, universal, universal2, amsterdam2, mendoza]
+const carousel1 = [amsterdam, london, montmartre, jujuy]
+const carousel2 = [amsterdam3, venice,  angostura, oasis]
+const carousel3 = [jujuy, venice2, universal, universal2, amsterdam2, mendoza]
 
-export { carrousel1, carrousel2, carrousel3 }
+export { carousel1, carousel2, carousel3 }
