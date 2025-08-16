@@ -2,7 +2,7 @@ import { Box, CardMedia } from "@mui/material";
 import "./Player.css";
 import Pause from "../../assets/icons/Pause";
 import Play from "../../assets/icons/Play";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type Props = {
   src: string;
@@ -10,27 +10,26 @@ type Props = {
 
 const Player = (props: Props) => {
   const { src } = props;
-  const [booleano] = useState<boolean>(true);
+  const [toggleIcon, setToggleIcon] = useState<boolean>(true);
+  const ref = useRef<HTMLAudioElement>(null);
+
+  const cambiarAudio = () => {
+    if (ref.current?.paused) {
+      ref.current?.play();
+      setToggleIcon(true);
+    } else {
+      ref.current?.pause();
+      setToggleIcon(false);
+    }
+  };
 
   return (
-    <Box className="player-container">
-      <CardMedia component={"audio"} src={src} autoPlay loop />
-      {booleano ? (
-        <Pause
-          style={{
-            fill: '#456556',
-            height: "100%",
-            width: "100%",
-          }}
-        />
+    <Box className="player-container" onClick={cambiarAudio}>
+      <CardMedia component={"audio"} src={src} autoPlay loop ref={ref} />
+      {toggleIcon ? (
+        <Pause className="player-icon" />
       ) : (
-        <Play
-          style={{
-            fill: '#456556',
-            height: "100%",
-            width: "100%",
-          }}
-        />
+        <Play className="player-icon" />
       )}
     </Box>
   );

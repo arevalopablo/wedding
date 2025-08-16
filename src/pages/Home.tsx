@@ -6,6 +6,7 @@ import { capri, gondole50, heroMobile, heroTablet, sorpasso, timelineDesktop, ti
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import { useState } from "react";
+import prueba from '../assets/mobile.png'
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -49,7 +50,7 @@ const Home = () => {
       )}
       {!loader && !welcomeScreen && (
         <>
-          <Player src={cs} />
+          <Player src={cs}/>
           {showModal && (
             <Modal
               isMap={isMap}
@@ -62,7 +63,7 @@ const Home = () => {
           )}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
+              <Hero xsImg={prueba} mdImg={heroTablet} lgImg={capri} />
             </Grid>
             <Grid size={12}>
               <Countdown />

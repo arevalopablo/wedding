@@ -1,6 +1,7 @@
 .player-container {
   width: 60px;
   height: 60px;
+  border: none;
   border-radius: 50%;
   position: fixed;
   right: 20px;
@@ -11,4 +12,9 @@
   align-items: center;
   cursor: pointer;
 }
+
+.player-icon {
+  fill: #456556;
+}
+
 
