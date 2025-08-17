@@ -2,10 +2,12 @@ import { Box, Grid } from "@mui/material";
 import { Hero, Carousel, Countdown, Info, Modal, Phrase, Player, Timeline } from "../components/components";
 import { carousel1, carousel2, carousel3 } from "../components/carousel/images";
 import { calendar, discoball, marriage, travel } from "../assets/icons/gif";
-import { capri, gondole50,  heroMobile, heroTablet, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet } from "../assets/assets";
+import { capri, gondole50, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet } from "../assets/assets";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import { useState } from "react";
+import prueba from '../assets/prueba.svg'
+import prueba2 from '../assets/prueba2.svg'
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -62,7 +64,7 @@ const Home = () => {
           )}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
+              <Hero xsImg={prueba} mdImg={prueba2} lgImg={capri} />
             </Grid>
             <Grid size={12}>
               <Countdown />
