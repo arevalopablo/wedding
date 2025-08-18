@@ -172,7 +172,7 @@ const Home = () => {
               <Info
                 mainText="¿Dress code?"
                 subtext="Elegante sport"
-                description="¡El color BLANCO solo es para la novia!"
+                description="¡Color BLANCO solo para la novia!"
                 showBtn
                 className="info-container-green"
                 bgc=""
@@ -197,7 +197,8 @@ const Home = () => {
                 btnClassname="btn-date"
                 icon={check}
                 showIcon
-                showBtn
+                showBtn={false}
+                href="https://wa.me/5491134141777"
               />
             </Grid>
             <Grid size={12}>

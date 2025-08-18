@@ -1,4 +1,4 @@
-import { Box, Button, ImageList, ImageListItem, Typography } from "@mui/material";
+import { Box, Button, ImageList, ImageListItem, Link, Typography } from "@mui/material";
 import "./Info.css";
 
 type Props = {
@@ -12,11 +12,12 @@ type Props = {
   showBtn?: boolean,
   className: string;
   btnClassname?: string;
+  href?: string
   onClick?: () => void
 };
 
 const Info = (props: Props) => {
-  const { bgc, mainText, subtext, description, btnText, showBtn, className, btnClassname, showIcon, icon, onClick } = props;
+  const { bgc, mainText, subtext, description, btnText, showBtn, className, btnClassname, showIcon, icon, onClick, href } = props;
   
   return (
     <Box className={"info-section"} data-aos='fade-up' data-aos-duration='400' sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '430px', sm: '400px', md: '450px'}}}>
@@ -36,7 +37,9 @@ const Info = (props: Props) => {
         
         <Typography variant="h1" fontWeight={'400'}  data-aos='fade'>{subtext}</Typography>
         <Typography variant="h2" fontWeight={'400'} fontSize={{xs: '18px', md: '24px'}} data-aos='fade'>{description}</Typography>
-        {showBtn && <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button>}
+        {/* {showBtn && <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button>} */}
+        {showBtn ? <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button> :
+        <Link href={href}><Button className={`btn ${btnClassname}`} data-aos='fade'>{btnText}</Button></Link>}
       </Box>
     </Box>
   );
