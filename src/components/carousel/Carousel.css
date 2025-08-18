@@ -3,7 +3,6 @@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  /* animation: 1s zoom ease; */
 }
 
 .carousel-section::before,

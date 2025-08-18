@@ -37,7 +37,6 @@ const Info = (props: Props) => {
         
         <Typography variant="h1" fontWeight={'400'}  data-aos='fade'>{subtext}</Typography>
         <Typography variant="h2" fontWeight={'400'} fontSize={{xs: '18px', md: '24px'}} data-aos='fade'>{description}</Typography>
-        {/* {showBtn && <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button>} */}
         {showBtn ? <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button> :
         <Link href={href}><Button className={`btn ${btnClassname}`} data-aos='fade'>{btnText}</Button></Link>}
       </Box>
