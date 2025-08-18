@@ -20,7 +20,7 @@ import {
 import {
   capri,
   gondole,
-  heroMobile,
+  // heroMobile,
   heroTablet,
   sorpasso,
   timelineDesktop,
@@ -32,6 +32,7 @@ import {
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import { useState } from "react";
+import png from '../assets/prueba-png.png'
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -88,7 +89,7 @@ const Home = () => {
           )}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
+              <Hero xsImg={png} mdImg={heroTablet} lgImg={capri} />
             </Grid>
             <Grid size={12}>
               <Countdown />
@@ -172,7 +173,7 @@ const Home = () => {
               <Info
                 mainText="¿Dress code?"
                 subtext="Elegante sport"
-                description="¡Color BLANCO solo para la novia!"
+                description="¡El color BLANCO es solo para la novia!"
                 showBtn
                 className="info-container-green"
                 bgc=""
