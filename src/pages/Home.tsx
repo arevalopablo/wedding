@@ -188,9 +188,9 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Info
-                mainText="¡Confirmá tu asistencia!"
-                subtext="antes del 01 de Septiembre 2025"
-                description="!Te esperamos!"
+                mainText="¡Confirmá asistencia!"
+                subtext="!Te esperamos!"
+                description="Confirmar antes del 01.09.2025"
                 bgc={"#fff"}
                 className="info-container-green"
                 btnText="Confirmar"
