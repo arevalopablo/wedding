@@ -22,13 +22,17 @@ const Modal = (props: Props) => {
         {isMap ? (
           <Box
             component={"iframe"}
-            src={ location ? `${data.locations.registroCivil.address}` : `${data.locations.ilSorpasso.address}`}
+            src={
+              location
+                ? `${data.locations.registroCivil.address}`
+                : `${data.locations.ilSorpasso.address}`
+            }
             sx={{ border: "0", width: "100%", height: "100%" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></Box>
         ) : (
-          <Box className="alias-section" >
+          <Box className="alias-section">
             <Box className="alias-container">
               <Typography variant="h1">¿Regalo?</Typography>
               <ImageList
@@ -39,15 +43,15 @@ const Modal = (props: Props) => {
                 </ImageListItem>
               </ImageList>
               <Typography variant="h2">
-               ¡¡El mejor regalo es tu presencia en el día más importante de nuestras vidas!! Aún así, si deseás contribuir para cumplir nuestro sueño, te dejamos nuestro alias.
+                ¡¡El mejor regalo es tu presencia en nuestro día más
+                importante!! Aún así, si deseás ayudarnos, te dejamos nuestro
+                alias.
               </Typography>
               <Box>
                 <Typography variant="h1">Alias</Typography>
-                <Typography variant="h2">maru&pablo</Typography>
+                <Typography variant="h2">maru.pablo.boda</Typography>
               </Box>
-              <Typography variant="h3">
-                ¡Muchas gracias! 
-              </Typography>
+              <Typography variant="h3">¡Muchas gracias!</Typography>
             </Box>
           </Box>
         )}

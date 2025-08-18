@@ -1,13 +1,37 @@
 import { Box, Grid } from "@mui/material";
-import { Hero, Carousel, Countdown, Info, Modal, Phrase, Player, Timeline } from "../components/components";
+import {
+  Hero,
+  Carousel,
+  Countdown,
+  Info,
+  Modal,
+  Phrase,
+  Player,
+  Timeline,
+} from "../components/components";
 import { carousel1, carousel2, carousel3 } from "../components/carousel/images";
-import { calendar, discoball, marriage, travel } from "../assets/icons/gif";
-import { capri, gondole50, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet } from "../assets/assets";
+import {
+  calendar,
+  check,
+  discoball,
+  travel,
+  diamond,
+} from "../assets/icons/gif";
+import {
+  capri,
+  gondole,
+  heroMobile,
+  heroTablet,
+  sorpasso,
+  timelineDesktop,
+  timelineMobile,
+  timelineTablet,
+  welcomeImgDesktop,
+  welcomeImgTablet,
+} from "../assets/assets";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
 import { useState } from "react";
-import prueba from '../assets/prueba.svg'
-import prueba2 from '../assets/prueba2.svg'
 
 const Home = () => {
   const [welcomeScreen, setWelcomeScreen] = useState<boolean>(true);
@@ -51,7 +75,7 @@ const Home = () => {
       )}
       {!loader && !welcomeScreen && (
         <>
-          <Player src={cs}/>
+          <Player src={cs} />
           {showModal && (
             <Modal
               isMap={isMap}
@@ -64,7 +88,7 @@ const Home = () => {
           )}
           <Grid container>
             <Grid size={12}>
-              <Hero xsImg={prueba} mdImg={prueba2} lgImg={capri} />
+              <Hero xsImg={heroMobile} mdImg={heroTablet} lgImg={capri} />
             </Grid>
             <Grid size={12}>
               <Countdown />
@@ -125,7 +149,7 @@ const Home = () => {
             </Grid>
             <Grid size={12}>
               <Info
-                bgc={`url(${gondole50})`}
+                bgc={`url(${gondole})`}
                 mainText="¿Regalo?"
                 subtext="Soñamos vivir en Italia..."
                 description="Ayudanos a cumplirlo!"
@@ -148,12 +172,12 @@ const Home = () => {
               <Info
                 mainText="¿Dress code?"
                 subtext="Elegante sport"
-                description="El color BLANCO solo es para la novia! Por favor evitar este color. Gracias"
+                description="¡El color BLANCO solo es para la novia!"
                 showBtn
                 className="info-container-green"
                 bgc=""
                 showIcon
-                icon={marriage}
+                icon={diamond}
               />
             </Grid>
             {/* <Grid size={12}>
@@ -161,6 +185,20 @@ const Home = () => {
             </Grid> */}
             <Grid size={12}>
               <Phrase phrase='"Gracias por ser parte de nuestra alegría y por hacer de esta noche un recuerdo eterno"' />
+            </Grid>
+            <Grid size={12}>
+              <Info
+                mainText="¡Confirmá tu asistencia!"
+                subtext="antes del 01 de Septiembre 2025"
+                description="!Te esperamos!"
+                bgc={"#fff"}
+                className="info-container-green"
+                btnText="Confirmar"
+                btnClassname="btn-date"
+                icon={check}
+                showIcon
+                showBtn
+              />
             </Grid>
             <Grid size={12}>
               <Hero

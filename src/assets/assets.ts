@@ -1,6 +1,5 @@
 import capri from '../assets/capri.png'
-// import gondole from '../assets/gondole.jpg'
-import gondole50 from '../assets/gondole50.png'
+import gondole from '../assets/gondole.png'
 import sorpasso from '../assets/sorpasso.svg'
 import heroMobile from '../assets/hero-mobile.svg'
 import heroTablet from '../assets/hero-tablet.svg'
@@ -10,4 +9,4 @@ import timelineDesktop from "../assets/timeline-desktop.png";
 import welcomeImgTablet from "../assets/welcome-img-tablet.png";
 import welcomeImgDesktop from "../assets/welcome-img-desktop.png";
 
-export { capri, gondole50, heroMobile, heroTablet, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet}
+export { capri, gondole, heroMobile, heroTablet, sorpasso, timelineDesktop, timelineMobile, timelineTablet, welcomeImgDesktop, welcomeImgTablet }
