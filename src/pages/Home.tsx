@@ -1,4 +1,3 @@
-import { Box, Grid } from "@mui/material";
 import {
   Hero,
   Carousel,
@@ -31,6 +30,8 @@ import {
 } from "../assets/assets";
 import Couple from "../assets/icons/Couple";
 import cs from "../audio/champagne Supernova.mp3";
+
+import { Box, Grid } from "@mui/material";
 import { useState } from "react";
 
 const Home = () => {
@@ -55,19 +56,21 @@ const Home = () => {
           array={["Maru", "&", "Pablo"]}
           showBtn
           onClick={() => {
-            setWelcomeScreen(false), setLoader(true);
+            (setWelcomeScreen(false), setLoader(true));
           }}
         />
       )}
-
       {loader && (
         <Grid container>
+          z
           <Grid
             size={12}
-            height={"100vh"}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
+            sx={{
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             <Couple />
           </Grid>
@@ -82,7 +85,7 @@ const Home = () => {
               location={location}
               icon={travel}
               onClick={() => {
-                setShowModal(false), setIsMap(true), setLocation(true);
+                (setShowModal(false), setIsMap(true), setLocation(true));
               }}
             />
           )}
@@ -130,7 +133,7 @@ const Home = () => {
                 showIcon
                 icon={discoball}
                 onClick={() => {
-                  setShowModal(true), setLocation(false);
+                  (setShowModal(true), setLocation(false));
                 }}
               />
             </Grid>
@@ -160,7 +163,7 @@ const Home = () => {
                 showIcon
                 icon={travel}
                 onClick={() => {
-                  setShowModal(true), setIsMap(false);
+                  (setShowModal(true), setIsMap(false));
                 }}
               />
             </Grid>
@@ -180,9 +183,9 @@ const Home = () => {
                 icon={diamond}
               />
             </Grid>
-            {/* <Grid size={12}>
+            {/* <Grid2 size={12}>
               <Form />
-            </Grid> */}
+            </Grid2> */}
             <Grid size={12}>
               <Phrase phrase='"Gracias por ser parte de nuestra alegría y por hacer de esta noche un recuerdo eterno"' />
             </Grid>
@@ -198,7 +201,7 @@ const Home = () => {
                 icon={check}
                 showIcon
                 showBtn={false}
-                href="https://wa.me/5491134141777"
+                href="https://wa.me/5491111111111"
               />
             </Grid>
             <Grid size={12}>

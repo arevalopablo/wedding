@@ -6,7 +6,7 @@ const Countdown = () => {
   const { time, finish } = useCountdown();
 
   if (finish) {
-    return <h1>¡¡¡HOY NOS CASAMOS!!!</h1>;
+    return <h1>¡¡¡Estamos casados!!!</h1>;
   }
 
   return (
