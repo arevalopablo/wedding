@@ -15,8 +15,7 @@ const Modal = (props: Props) => {
   return (
     <Box className="modal-section">
       <Box
-        width={"80%"}
-        height={{ xs: "60%", sm: "80%", md: "80%" }}
+      sx={{width: '80%', height: { xs: "60%", sm: "80%", md: "80%" }}}
         className="modal-container"
       >
         {isMap ? (

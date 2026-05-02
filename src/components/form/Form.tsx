@@ -24,11 +24,7 @@ const Form = () => {
 
         <Box
           component={"form"}
-          display={"flex"}
-          flexDirection={"column"}
-          gap={1}
-          width={{ xs: "90%", sm: "60%", md: "40%", lg: "30%" }}
-          m={"30px auto"}
+          sx={{flex: 'flex', flexDirection: 'column', width: {xs: "90%", sm: "60%", md: "40%", lg: "30%"}, m: '30px auto', gap: 1}}
           onSubmit={formik.handleSubmit}
           data-aos='fade-up'
         >

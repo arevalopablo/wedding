@@ -20,7 +20,7 @@ const Carousel = (props: Props) => {
 
   return (
     <Box className='carousel-section' data-aos='zoom-in-up' >
-      {['obj', 'obj2'].map((_, i) => (
+      {Array.from({length: 2}).map((_, i) => (
         <ImageList key={i} className={carousel ? 'slide-img' : ''} sx={{display: 'inline-flex'}}>
         {arrayImg.map((img, index) => (
           <ImageListItem key={index} sx={{m: '0 15px', width: {xs: '300px', sm: '600px', md: '600px', lg: '700px'}}}>

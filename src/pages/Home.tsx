@@ -178,7 +178,6 @@ const Home = () => {
                 description="¡El color BLANCO es solo para la novia!"
                 showBtn
                 className="info-container-green"
-                bgc=""
                 showIcon
                 icon={diamond}
               />

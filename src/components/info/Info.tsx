@@ -2,7 +2,7 @@ import { Box, Button, ImageList, ImageListItem, Link, Typography } from "@mui/ma
 import "./Info.css";
 
 type Props = {
-  bgc: string;
+  bgc?: string;
   mainText: string;
   subtext: string;
   description: string;
@@ -23,7 +23,7 @@ const Info = (props: Props) => {
     <Box className={"info-section"} data-aos='fade-up' data-aos-duration='400' sx={{ background: bgc, backgroundRepeat: {xs: 'no-repeat', md: 'repeat-x'}, backgroundSize: {xs: 'cover', sm: 'cover', md: 'contain', backgroundPosition: 'center'}, height: {xs: '430px', sm: '400px', md: '450px'}}}>
       
       <Box className={`info-container ${className}`} data-aos='fade-up' data-aos-duration='400' sx={{backgroundSize: {xs: '80%', sm: '60%', md: '25%'}, backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom'}}>
-        <Typography variant="h1" fontWeight={'400'} >{mainText}</Typography>
+        <Typography variant="h1" sx={{fontWeight: '400'}}>{mainText}</Typography>
         {showIcon && (
           <ImageList sx={{width: '100px', m: '10px auto', display: 'flex'}}>
             <ImageListItem data-aos='fade'>
@@ -35,8 +35,8 @@ const Info = (props: Props) => {
           </ImageList>
         )}
         
-        <Typography variant="h1" fontWeight={'400'}  data-aos='fade'>{subtext}</Typography>
-        <Typography variant="h2" fontWeight={'400'} fontSize={{xs: '18px', md: '24px'}} data-aos='fade'>{description}</Typography>
+        <Typography variant="h1" sx={{fontWeight: '400'}}  data-aos='fade'>{subtext}</Typography>
+        <Typography variant="h2" sx={{fontWeight: '400', fontSize: {xs: '18px', md: '24px'}}} data-aos='fade'>{description}</Typography>
         {showBtn ? <Button className={`btn ${btnClassname}`} data-aos='fade' onClick={onClick}> {btnText}</Button> :
         <Link href={href} target="_blank" rel="noopener noreferrer"><Button className={`btn ${btnClassname}`} data-aos='fade'>{btnText}</Button></Link>}
       </Box>

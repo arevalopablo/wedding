@@ -16,8 +16,8 @@ const Hero = (props: Props) => {
 
   return (
     <Box
-      display={'flex'} flexDirection={'column'} justifyContent={'flex-end'} 
       sx={{
+        display: 'flex', flexDirection:'column', justifyContent:'flex-end',
         height: '100vh',
         background: { xs: `url(${xsImg})`, sm: `url(${mdImg})`, md: `url(${lgImg})`, lg: `url(${lgImg})` },
         backgroundRepeat: {xs: 'no-repeat', sm: 'no-repeat', lg: 'no-repeat'},
@@ -27,7 +27,7 @@ const Hero = (props: Props) => {
     >
       {welcomeScreen && 
         <Box className='welcome-screen-section'>
-          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+          <Box sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}} >
             {array?.map((name, index) => (
               <Typography className={`showText${index + 1}`} key={index} variant="h1" sx={{fontFamily: 'Great Vibes', fontSize: name === '&' ? {xs: '40px !important', sm: '50px !important', md: '60px !important'} : {xs: '60px !important', sm: '70px !important', md:'70px !important', lg: '80px !important'}, pt: '20px', mr: '12px', opacity: '0'}}>{name}</Typography>
             ))}
